@@ -20,16 +20,31 @@
 
 
     <style>
-        #banner .item {
+        .owl-carousel .item {
             margin: 0;
         }
 
-        #banner .item img {
+        .owl-carousel .item img {
+            position: relative;
             display: block;
             width: 100%;
             height: 420px;
             object-fit: cover;
         }
+
+        .owl-controls {
+            position: absolute !important;
+            bottom: 30px;
+            left: 25%;
+        }
+
+        .owl-mobile .owl-controls {
+            position: absolute !important;
+            bottom: 0 !important;
+            left: 25%;
+        }
+        
+
     </style>
 
 </head>
@@ -480,7 +495,7 @@
                 <div class="hidden promotion-area w-12/12 md:grid gap-3">
                     <div class="upper gap-3 rounded-md overflow-hidden" style="height:450px;">
                         <!-- Owl carousel -->
-                        <div id="banner" style="height:100%;">
+                        <div class="banner owl-carousel owl-theme" style="height:100%;">
                             <div class="item"><img src="../static/assets/imgs/resources/01.jpg" alt="Owl Image"></div>
                             <div class="item"><img src="../static/assets/imgs/resources/011.jpg" alt="Owl Image"></div>
                             <div class="item"><img src="../static/assets/imgs/resources/01.jpg" alt="Owl Image"></div>
@@ -509,17 +524,35 @@
                     </div> -->
                 </div>
                 <div class="mobile promotion-area w-12/12 grid md:hidden gap-3">
-                    <div class="upper grid gap-3 rounded-md overflow-hidden">
+                    <div class="upper gap-3 rounded-md overflow-hidden">
                         <!-- Owl carousel -->
+                        <div class="banner owl-carousel owl-mobile owl-theme" style="height:100%;">
+                            <div class="item"><img src="../static/assets/imgs/resources/01.jpg" alt="Owl Image"></div>
+                            <div class="item"><img src="../static/assets/imgs/resources/011.jpg" alt="Owl Image"></div>
+                            <div class="item"><img src="../static/assets/imgs/resources/01.jpg" alt="Owl Image"></div>
+                            <div class="item"><img src="../static/assets/imgs/resources/011.jpg" alt="Owl Image"></div>
+                            <div class="item"><img src="../static/assets/imgs/resources/01.jpg" alt="Owl Image"></div>
+                            <div class="item"><img src="../static/assets/imgs/resources/011.jpg" alt="Owl Image"></div>
+                            <div class="item"><img src="../static/assets/imgs/resources/01.jpg" alt="Owl Image"></div>
+                            <div class="item"><img src="../static/assets/imgs/resources/011.jpg" alt="Owl Image"></div>
+                            <div class="item"><img src="../static/assets/imgs/resources/01.jpg" alt="Owl Image"></div>
+                            <div class="item"><img src="../static/assets/imgs/resources/011.jpg" alt="Owl Image"></div>
+                            <div class="item"><img src="../static/assets/imgs/resources/01.jpg" alt="Owl Image"></div>
+                            <div class="item"><img src="../static/assets/imgs/resources/011.jpg" alt="Owl Image"></div>
+                            <div class="item"><img src="../static/assets/imgs/resources/01.jpg" alt="Owl Image"></div>
+                            <div class="item"><img src="../static/assets/imgs/resources/011.jpg" alt="Owl Image"></div>
+                            <div class="item"><img src="../static/assets/imgs/resources/01.jpg" alt="Owl Image"></div>
+                            <div class="item"><img src="../static/assets/imgs/resources/011.jpg" alt="Owl Image"></div>
+                        </div>
                         <!-- Owl carousel -->
                     </div>
-                    <div class="lower grid gap-3 grid-flow-row grid-cols-2">
+                    <!-- <div class="lower grid gap-3 grid-flow-row grid-cols-2">
                         <div class="grid rounded-md overflow-hidden card">
                         </div>
                         <div class="grid rounded-md overflow-hidden banner-lower">
                             <img style="object-fit: cover;" src="../static/assets/imgs//resources/01.png" alt="">
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="hidden md:grid side-bar gap-3 content-start product-categories w-12/12">
                     <div class="grid p-0 side-menu card rounded-none rounded-t-md overflow-hidden">
