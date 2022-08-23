@@ -14,6 +14,33 @@
     <link href="../static/icons/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type='text/css'>
 
     <title>Golden - GOLDEN</title>
+
+    <style>
+        .cs-chart-room .card {
+            margin: 5px 0;
+        }
+
+        .cs-chart-room .card div {
+            justify-content: space-between;
+        }
+
+        .cs-chart-room .card .top-content {
+            padding: 4px 12px;
+            border: 1px solid #c8e1ff;
+            border-bottom: 0;
+            border-top-left-radius: 0.4rem;
+            border-top-right-radius: 0.4rem;
+            background-color: #f1f8ff;
+        }
+
+        .cs-chart-room .card .bottom-content {
+            padding: 4px 12px;
+            border: 1px solid #e1e4e8;
+            border-bottom-left-radius: 0.4rem;
+            border-bottom-right-radius: 0.4rem;
+            background-color: #f6f8fa;
+        }
+    </style>
 </head>
 
 <script>
@@ -397,17 +424,61 @@
             <h3>Chats | Forums</h3>
         </div>
         <section class="main w-12/12 py-6 pt-0" style="height: auto;">
-            <div class="grid gap-6 md:gap-10 p-5 product-detail w-full md:w-full mx-auto" style="padding-inline:0;">
-                <div class="" style="border:1px solid red;width: 100%;">
-                    <p>Thru the Chats -> Client will be able to start a direct chat</p>
-
-                    <p>The Forums -> The client will join discussions or do other related stuff</p>
-
-                    <h1>[STILL UNDER DEVELOPMENT]</h1>
+            <div class=""
+                style="padding:0 38px;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;height:560px;">
+                <div class="gap-2 md:w-full mx-auto px-5 pt-8"
+                    style="width:70%;border:1px solid #dce2e9;border-radius:4px;height: 100%;">
+                    <div class="side-space">
+                        <div class="cs-chart-room">
+                            <div class="card" style="box-shadow: unset;">
+                                <div class="top-content cs-flex gap-2">
+                                    <div class="cs-flex gap-2">
+                                        <img src="../static/assets/imgs/resources/profiledefault.png" alt=""
+                                            class="cs-avatar">
+                                        <h1 class="">John Smith</h1>
+                                    </div>
+                                    <h1 class="">Sunday</h1>
+                                </div>
+                                <div class="bottom-content flex">
+                                    <h1 class="">Contract finan...</h1>
+                                    <small class="">30 hours ago</small>
+                                </div>
+                            </div>
+                            <div class="card" style="box-shadow: unset;">
+                                <div class="top-content cs-flex gap-2">
+                                    <div class="cs-flex gap-2">
+                                        <img src="../static/assets/imgs/resources/profiledefault.png" alt=""
+                                            class="cs-avatar">
+                                        <h1 class="">John Smith</h1>
+                                    </div>
+                                    <h1 class="">Friday</h1>
+                                </div>
+                                <div class="bottom-content flex">
+                                    <h1 class="">New Payment...</h1>
+                                    <small class="">86 hours ago</small>
+                                </div>
+                            </div>
+                            <div class="card" style="box-shadow: unset;">
+                                <div class="top-content cs-flex gap-2">
+                                    <div class="cs-flex gap-2">
+                                        <img src="../static/assets/imgs/resources/profiledefault.png" alt=""
+                                            class="cs-avatar">
+                                        <h1 class="">John Smith</h1>
+                                    </div>
+                                    <h1 class="">Last month</h1>
+                                </div>
+                                <div class="bottom-content flex">
+                                    <h1 class="">I need support...</h1>
+                                    <small class="">30 July 2022</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="">
-                    <div class="cs-container cs-flex">
-                        <div class="cs-card">
+                <div class=""
+                    style="width:30%;border:1px solid #dce2e9;border-radius:4px;padding:38px 20px;height:100%;">
+                    <div class="cs-container" style="padding:0;margin:0;">
+                        <div class="cs-card" style="height:400px;margin:0;border:1px solid #dce2e9;">
                             <div class="cs-header">
                                 <h3>Foroden Messenger</h3>
                             </div>
@@ -426,6 +497,7 @@
             </div>
         </section>
     </main>
+
     <footer class="mt-10">
         <div class="container-fluid foot mt-50">
             <div class="container">
@@ -579,6 +651,8 @@
                 rows[rows.length - 1].querySelector('.cs-b').classList.remove('cs-hide');
             }, 2000);
         }
+
+        renderQuestion("Hi Phillip!");
 
         document.querySelector('#save').addEventListener('click', () => {
             const inputValue = document.querySelector('#input').value;

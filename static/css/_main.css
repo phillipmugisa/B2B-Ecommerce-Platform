@@ -39,7 +39,6 @@
 }
 
 .cs-card {
-    border: 1px solid red;
     position: relative;
     inline-size: 100%;
     min-block-size: 100%;
