@@ -33,12 +33,15 @@ ALLOWED_HOSTS = ["foroden.com"]
 # Application definition
 
 INSTALLED_APPS = [
-    "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
+    'modeltranslation',
+    'django.contrib.admin',
+    
     # custom apps
     "manager.apps.ManagerConfig",
     "supplier.apps.SupplierConfig",
@@ -50,6 +53,8 @@ INSTALLED_APPS = [
     "api.apps.ApiConfig",
     # third party
     "rest_framework",
+    # "channels",
+    "rosetta",
 ]
 
 MIDDLEWARE = [
@@ -80,12 +85,14 @@ TEMPLATES = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
                 'django.template.context_processors.i18n',
+                'manager.context_processors.categories_showroows',
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = "core.wsgi.application"
+# ASGI_APPLICATION = "core.wsgi.application"
 
 
 # Database
@@ -182,12 +189,14 @@ LANGUAGES = (
     ("en", _("English")),
     ('ar', _('Arabic')),
     ("fr", _("French")),
+    ('de', _('German')),
 )
 
 SITE_ROOT = os.path.dirname(os.path.realpath(__name__))
 LOCALE_PATHS = ( os.path.join(SITE_ROOT, 'locale'), )
 
-
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
+MODELTRANSLATION_LANGUAGES = ('ar', 'fr', 'de', 'en')
 
 # PAYMENTS
 # braintee
