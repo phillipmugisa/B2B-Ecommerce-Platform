@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-24 04:39+0000\n"
+"POT-Creation-Date: 2022-08-24 08:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,150 +19,150 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: app_admin/views.py:44 app_admin/views.py:107
+#: app_admin/views.py:48 app_admin/views.py:111
 #: templates/app_admin/utils/layout.html:101
 msgid "Admin Dashboard"
 msgstr "لوحة تحكم المسؤول"
 
-#: app_admin/views.py:50 app_admin/views.py:113
+#: app_admin/views.py:54 app_admin/views.py:117
 msgid "Total Suppliers"
 msgstr "إجمالي الموردين"
 
-#: app_admin/views.py:51 app_admin/views.py:114
+#: app_admin/views.py:55 app_admin/views.py:118
 msgid "Total Supplier Count"
 msgstr "إجمالي عدد الموردين"
 
-#: app_admin/views.py:55 app_admin/views.py:118
+#: app_admin/views.py:59 app_admin/views.py:122
 msgid "Total Buyers"
 msgstr "إجمالي المشترين"
 
-#: app_admin/views.py:56 app_admin/views.py:119
+#: app_admin/views.py:60 app_admin/views.py:123
 msgid "Total Buyer Count"
 msgstr "إجمالي عدد المشتري"
 
-#: app_admin/views.py:60 app_admin/views.py:123
+#: app_admin/views.py:64 app_admin/views.py:127
 msgid "Total Product"
 msgstr "إجمالي المنتج"
 
-#: app_admin/views.py:61 app_admin/views.py:124
+#: app_admin/views.py:65 app_admin/views.py:128
 msgid "Total Product Count"
 msgstr "إجمالي عدد المنتجات"
 
-#: app_admin/views.py:65 app_admin/views.py:161
+#: app_admin/views.py:69 app_admin/views.py:165
 msgid "Total Showrooms"
 msgstr "إجمالي صالات العرض"
 
-#: app_admin/views.py:66 app_admin/views.py:162
+#: app_admin/views.py:70 app_admin/views.py:166
 msgid "Showroom Count"
 msgstr "عدد صالة العرض"
 
-#: app_admin/views.py:70 app_admin/views.py:166
+#: app_admin/views.py:74 app_admin/views.py:170
 msgid "Total Stores"
 msgstr "إجمالي المتاجر"
 
-#: app_admin/views.py:71 app_admin/views.py:167
+#: app_admin/views.py:75 app_admin/views.py:171
 msgid "Total Store Count"
 msgstr "إجمالي عدد المتاجر"
 
-#: app_admin/views.py:75 app_admin/views.py:171
+#: app_admin/views.py:79 app_admin/views.py:175
 msgid "Total Memberships"
 msgstr "إجمالي العضويات"
 
-#: app_admin/views.py:76 app_admin/views.py:172 payment/views.py:42
-#: payment/views.py:65 templates/manager/support.html:58
+#: app_admin/views.py:80 app_admin/views.py:176 payment/views.py:45
+#: payment/views.py:68 templates/manager/support.html:58
 #: templates/utils/header.html:165 templates/utils/header.html:272
 msgid "Memberships"
 msgstr "العضويات"
 
-#: app_admin/views.py:80 app_admin/views.py:128
+#: app_admin/views.py:84 app_admin/views.py:132
 msgid "Total Contracts"
 msgstr "إجمالي العقود"
 
-#: app_admin/views.py:81 app_admin/views.py:129
+#: app_admin/views.py:85 app_admin/views.py:133
 msgid "Contract Created"
 msgstr "تم إنشاء العقد"
 
-#: app_admin/views.py:155 app_admin/views.py:255
+#: app_admin/views.py:159 app_admin/views.py:302
 msgid "Admin Dashboard - Clients"
 msgstr "لوحة تحكم المسؤول"
 
-#: app_admin/views.py:176
+#: app_admin/views.py:180
 msgid "Total Services"
 msgstr "إجمالي الخدمات"
 
-#: app_admin/views.py:177
+#: app_admin/views.py:181
 msgid "Total Services Count"
 msgstr "إجمالي عدد الخدمات"
 
-#: app_admin/views.py:195 app_admin/views.py:227 app_admin/views.py:474
-#: auth_app/views.py:39 auth_app/views.py:99 supplier/views.py:679
-#: supplier/views.py:724 supplier/views.py:780
+#: app_admin/views.py:199 app_admin/views.py:253 app_admin/views.py:583
+#: auth_app/views.py:42 auth_app/views.py:102 supplier/views.py:683
+#: supplier/views.py:769 supplier/views.py:848
 msgid "Please Fill all fields."
 msgstr "لو سمحت أملأ كل الحقول."
 
-#: app_admin/views.py:200
+#: app_admin/views.py:206
 msgid "Invalid Data Entered."
 msgstr "تم إدخال بيانات غير صحيحة."
 
-#: app_admin/views.py:205 app_admin/views.py:237
+#: app_admin/views.py:231 app_admin/views.py:284
 #, python-brace-format
 msgid "Service ({name}) created successfully."
 msgstr "تم إنشاء الخدمة ({name}) بنجاح"
 
-#: app_admin/views.py:212 app_admin/views.py:244
+#: app_admin/views.py:238 app_admin/views.py:291
 msgid "Admin Dashboard - Manager"
 msgstr "لوحة تحكم المسؤول"
 
-#: app_admin/views.py:233
+#: app_admin/views.py:280
 msgid "Error Occurred. Try Again"
 msgstr "حدث خطأ. حاول ثانية"
 
-#: app_admin/views.py:272
+#: app_admin/views.py:319
 #, python-brace-format
 msgid "Category({name}) already exists."
 msgstr "الفئة ({name}) موجودة بالفعل."
 
-#: app_admin/views.py:290
+#: app_admin/views.py:357
 #, python-brace-format
 msgid "Sub category ({sub_cat_name}) already exists."
 msgstr "الفئة الفرعية ({sub_cat_name}) موجودة بالفعل"
 
-#: app_admin/views.py:301
+#: app_admin/views.py:389
 msgid "Category ({}) created successfully."
 msgstr "الفئة الفرعية ({sub_cat_name}) موجودة بالفعل."
 
-#: app_admin/views.py:312 app_admin/views.py:327 app_admin/views.py:342
-#: app_admin/views.py:359
+#: app_admin/views.py:400 app_admin/views.py:415 app_admin/views.py:430
+#: app_admin/views.py:447
 msgid "Admin Dashboard - Support"
 msgstr "لوحة تحكم المسؤول"
 
-#: app_admin/views.py:449
+#: app_admin/views.py:558
 msgid "Account Edited Successfully"
 msgstr ""
 
-#: app_admin/views.py:452
+#: app_admin/views.py:561
 #, fuzzy
 #| msgid "An Error Occurred. Try Again."
 msgid "An Error Occured. Please Try Again"
 msgstr "حدث خطأ. حاول ثانية."
 
-#: app_admin/views.py:478 auth_app/views.py:103
+#: app_admin/views.py:587 auth_app/views.py:106
 msgid "Username not available."
 msgstr ""
 
-#: app_admin/views.py:482 auth_app/views.py:111
+#: app_admin/views.py:591 auth_app/views.py:114
 msgid "Password mismatch."
 msgstr "كلمة المرور غير متطابقة."
 
-#: app_admin/views.py:503 auth_app/views.py:138
+#: app_admin/views.py:612 auth_app/views.py:159
 msgid "Your activation link is"
 msgstr "رابط التنشيط الخاص بك هو"
 
-#: app_admin/views.py:507 auth_app/views.py:142
+#: app_admin/views.py:616 auth_app/views.py:163
 msgid "Activate Foroden Activation"
 msgstr "تنشيط التنشيط Foroden"
 
-#: app_admin/views.py:519
+#: app_admin/views.py:628
 #, fuzzy
 #| msgid ""
 #| "Account Created Successfully. Please check your email for a verfication "
@@ -171,7 +171,7 @@ msgid "Account Created Successfully. Verfication link was sent user's email."
 msgstr ""
 "الحساب اقيم بنجاح. يرجى التحقق من بريدك الإلكتروني للحصول على ارتباط التحقق."
 
-#: app_admin/views.py:536 auth_app/views.py:172
+#: app_admin/views.py:645 auth_app/views.py:193
 msgid "Bad Request"
 msgstr "اقتراح غير جيد"
 
@@ -251,42 +251,42 @@ msgstr "موقع الكتروني"
 msgid "Responses to clients"
 msgstr "الردود على العملاء"
 
-#: auth_app/views.py:33 templates/utils/header.html:197
+#: auth_app/views.py:36 templates/utils/header.html:197
 #: templates/utils/header.html:213
 msgid "Sign In"
 msgstr "Sign In"
 
-#: auth_app/views.py:47
+#: auth_app/views.py:50
 msgid "Account not found. Try Again."
 msgstr "الحساب غير موجود. حاول ثانية."
 
-#: auth_app/views.py:53
+#: auth_app/views.py:56
 msgid "Please Activate your Email"
 msgstr "يرجى تفعيل البريد الإلكتروني الخاص بك"
 
-#: auth_app/views.py:77
+#: auth_app/views.py:80
 msgid "Sign Up"
 msgstr "اشتراك"
 
-#: auth_app/views.py:107
+#: auth_app/views.py:110
 msgid "Email not available."
 msgstr ""
 
-#: auth_app/views.py:154
+#: auth_app/views.py:175
 msgid ""
 "Account Created Successfully. Please check your email for a verfication link."
 msgstr ""
 "الحساب اقيم بنجاح. يرجى التحقق من بريدك الإلكتروني للحصول على ارتباط التحقق."
 
-#: auth_app/views.py:190 templates/auth_app/business_infor.html:9
+#: auth_app/views.py:211 templates/auth_app/business_infor.html:9
 msgid "Business Profile"
 msgstr "الملف التجاري"
 
-#: auth_app/views.py:204
+#: auth_app/views.py:225
 msgid "Please Fill all reqiured fields."
 msgstr "الرجاء تعبئة جميع الحقول المطلوبة."
 
-#: auth_app/views.py:224
+#: auth_app/views.py:268
 msgid "An Error Occurred. Try Again."
 msgstr "حدث خطأ. حاول ثانية."
 
@@ -315,7 +315,7 @@ msgstr "تم إنشاؤها على"
 msgid "Profile"
 msgstr "الملف الشخصي"
 
-#: buyer/views.py:54 buyer/views.py:71 supplier/views.py:639
+#: buyer/views.py:54 buyer/views.py:71 supplier/views.py:643
 #: templates/buyer/dashboard/utils/layout.html:56
 #: templates/buyer/profile.html:10
 #: templates/supplier/dashboard/utils/layout.html:93
@@ -417,7 +417,7 @@ msgstr "عدد الزيارات"
 msgid "Subject"
 msgstr ""
 
-#: manager/views.py:52 templates/app_admin/utils/layout.html:53
+#: manager/views.py:57 templates/app_admin/utils/layout.html:53
 #: templates/app_admin/utils/layout.html:103
 #: templates/manager/service_list.html:8
 #: templates/manager/showroom_detail.html:7
@@ -429,7 +429,7 @@ msgstr ""
 msgid "Home"
 msgstr "الصفحة الرئيسية"
 
-#: manager/views.py:126 templates/manager/about.html:54
+#: manager/views.py:131 templates/manager/about.html:54
 #: templates/manager/index.html:102 templates/manager/showroom_detail.html:9
 #: templates/manager/showroom_list.html:9
 #: templates/manager/showroom_list.html:15 templates/manager/support.html:51
@@ -438,7 +438,7 @@ msgstr "الصفحة الرئيسية"
 msgid "Showrooms"
 msgstr "صالات العرض"
 
-#: manager/views.py:194 supplier/views.py:635
+#: manager/views.py:199 supplier/views.py:639
 #: templates/manager/service_list.html:10
 #: templates/supplier/dashboard/utils/layout.html:63
 #: templates/supplier/supplier_detail.html:71 templates/utils/header.html:163
@@ -446,31 +446,31 @@ msgstr "صالات العرض"
 msgid "Services"
 msgstr "خدمات"
 
-#: manager/views.py:204 templates/manager/about.html:10
+#: manager/views.py:209 templates/manager/about.html:10
 #: templates/utils/header.html:162 templates/utils/header.html:251
 msgid "About Us"
 msgstr "معلومات عنا"
 
-#: manager/views.py:249 manager/views.py:260 manager/views.py:269
-#: manager/views.py:296 templates/app_admin/utils/layout.html:71
+#: manager/views.py:254 manager/views.py:265 manager/views.py:274
+#: manager/views.py:321 templates/app_admin/utils/layout.html:71
 #: templates/app_admin/utils/layout.html:169 templates/manager/support.html:44
 #: templates/utils/header.html:164 templates/utils/header.html:265
 msgid "Support"
 msgstr "الدعم"
 
-#: manager/views.py:284 manager/views.py:313
+#: manager/views.py:289 manager/views.py:338
 #, fuzzy
 #| msgid "Error Occurred. Try Again"
 msgid "Error Occured. Try Again"
 msgstr "حدث خطأ. حاول ثانية"
 
-#: manager/views.py:288
+#: manager/views.py:313
 #, fuzzy
 #| msgid "Service ({name}) created successfully."
 msgid "Discussion created successfully."
 msgstr "تم إنشاء الخدمة ({name}) بنجاح"
 
-#: manager/views.py:316
+#: manager/views.py:362
 #, fuzzy
 #| msgid "Category ({}) created successfully."
 msgid "Reply submitted successfully."
@@ -541,7 +541,7 @@ msgstr "اكتمل العقد"
 msgid "Contract accepted"
 msgstr "اكتمل العقد"
 
-#: payment/views.py:214
+#: payment/views.py:218
 #, fuzzy
 #| msgid "Category({name}) already exists."
 msgid "Membership already exists."
@@ -559,7 +559,7 @@ msgstr "عدد من المنتجات"
 msgid "Number of contracts"
 msgstr "عدد العقود"
 
-#: supplier/views.py:135 supplier/views.py:631
+#: supplier/views.py:139 supplier/views.py:635
 #: templates/manager/showroom_detail.html:45 templates/manager/support.html:65
 #: templates/supplier/dashboard/manage-store.html:24
 #: templates/supplier/dashboard/manage-store.html:34
@@ -570,11 +570,11 @@ msgstr "عدد العقود"
 msgid "Products"
 msgstr "منتجات"
 
-#: supplier/views.py:249
+#: supplier/views.py:253
 msgid "Categories"
 msgstr "فئات"
 
-#: supplier/views.py:583 supplier/views.py:627
+#: supplier/views.py:587 supplier/views.py:631
 #: templates/manager/showroom_detail.html:17
 #: templates/manager/showroom_detail.html:87
 #: templates/manager/showroom_list.html:25
@@ -585,46 +585,46 @@ msgstr "فئات"
 msgid "Stores"
 msgstr "المتاجر"
 
-#: supplier/views.py:621 templates/buyer/dashboard/utils/layout.html:23
+#: supplier/views.py:625 templates/buyer/dashboard/utils/layout.html:23
 #: templates/supplier/dashboard/utils/layout.html:23
 #, fuzzy
 #| msgid "Admin Dashboard"
 msgid "Supplier Dashboard"
 msgstr "لوحة تحكم المسؤول"
 
-#: supplier/views.py:703
+#: supplier/views.py:748
 #, fuzzy
 #| msgid "Category ({}) created successfully."
 msgid "Product create successfully."
 msgstr "الفئة الفرعية ({sub_cat_name}) موجودة بالفعل."
 
-#: supplier/views.py:707
+#: supplier/views.py:752
 #, fuzzy
 #| msgid "An Error Occurred. Try Again."
 msgid "An Error Occured. Try Again"
 msgstr "حدث خطأ. حاول ثانية."
 
-#: supplier/views.py:731
+#: supplier/views.py:776
 msgid "Please use a different store name."
 msgstr ""
 
-#: supplier/views.py:736
+#: supplier/views.py:781
 #, fuzzy
 #| msgid "Category ({}) created successfully."
 msgid "Store create successfully."
 msgstr "الفئة الفرعية ({sub_cat_name}) موجودة بالفعل."
 
-#: supplier/views.py:739
+#: supplier/views.py:807 supplier/views.py:887
 #, fuzzy
 #| msgid "An Error Occurred. Try Again."
 msgid "Sorry, an error occured. Please Try Again"
 msgstr "حدث خطأ. حاول ثانية."
 
-#: supplier/views.py:789
+#: supplier/views.py:857
 msgid "Please use a different service name."
 msgstr ""
 
-#: supplier/views.py:794
+#: supplier/views.py:862
 #, fuzzy
 #| msgid "Service ({name}) created successfully."
 msgid "Service create successfully."
