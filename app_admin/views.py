@@ -223,7 +223,8 @@ class ServiceCreateView(SupportOnlyAccessMixin, CreateView):
                         if model_field.name == f"{field}_{language[0]}":
                             setattr(instance, model_field.name, result.text)
                             instance.save()
-                except:
+                except Exception as Err:
+                    print("Error ocuured while translating: ", Err)
                     setattr(instance, f'{field}_{language[0]}', getattr(instance, field))
                     instance.save()
 
