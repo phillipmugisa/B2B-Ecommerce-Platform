@@ -68,7 +68,7 @@ class MembershipsDetailsView(AuthedOnlyAccessMixin, DetailView):
             'context_name' : "features",
             "results" : plan.features.all()
         }
-        context["STRIPE_PUBLIC_KEY"] = os.environ.get("STRIPE_PUBLIC_KEY")
+        context["STRIPE_PUBLIC_KEY"] = "pk_test_51LZd1MF6gkT4kB8Unw51MBXaLiznfL0KAcocxQAvmSD7Ote96G7ALpxKXpl4kqbW3AYpkglbVLsqTH3gf2duf2Pv00yU7JvDwl"
 
 
         # braintree
@@ -157,7 +157,7 @@ class CompletePaypalPaymentView(AuthedOnlyAccessMixin, View):
 class StripeCreateCheckoutSessionView(View):
     def post(self, request, pk):
 
-        stripe.api_key = os.environ.get("STRIPE_SECRET_KEY")
+        stripe.api_key = "sk_test_51LZd1MF6gkT4kB8Uy1JjK3JKqaKDrvyMqmbACkEy6Kv7CMwod3o4XIU1xSpN3hwix4uJvO7iZAIFQXKhmD8RdAEK00VOQfOmVg"
         plan = PaymentModels.MembershipPlan.objects.filter(id=pk).first()
         
         if plan.name == "Gold":
