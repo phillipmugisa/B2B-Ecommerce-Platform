@@ -603,7 +603,7 @@ msgstr "Tableau de bord fournisseur"
 
 #: supplier/views.py:748
 #| msgid "Category ({}) created successfully."
-msgid "Product create successfully."
+msgid "Product created successfully."
 msgstr "Produit créé avec succès."
 
 #: supplier/views.py:752
@@ -617,7 +617,7 @@ msgstr "Veuillez utiliser un nom de magasin différent."
 
 #: supplier/views.py:781
 #| msgid "Category ({}) created successfully."
-msgid "Store create successfully."
+msgid "Store created successfully."
 msgstr "Magasin créé avec succès."
 
 #: supplier/views.py:807 supplier/views.py:887
@@ -631,7 +631,7 @@ msgstr "Veuillez utiliser un autre nom de service."
 
 #: supplier/views.py:862
 #| msgid "Service ({name}) created successfully."
-msgid "Service create successfully."
+msgid "Service created successfully."
 msgstr "Service créé avec succès."
 
 #: templates/app_admin/editProfile.html:30 templates/auth_app/signup.html:33
@@ -1551,17 +1551,17 @@ msgstr "Langues"
 #~ "notre communauté mondiale et à la puissance de la technologie, Faire "
 #~ "contribue à alimenter la croissance des entrepreneurs du monde entier."
 
-#~ msgid "Discounted Products"
-#~ msgstr "Produits à prix réduit"
+~ msgid "Discounted Products"
+~ msgstr "Produits à prix réduit"
 
-#~ msgid "min"
-#~ msgstr "min"
+~ msgid "min"
+~ msgstr "min"
 
-#~ msgid "max"
-#~ msgstr "max"
+~ msgid "max"
+~ msgstr "max"
 
-#~ msgid "Contact"
-#~ msgstr "Contrats"
+~ msgid "Contact"
+~ msgstr "Contrats"
 
-#~ msgid "Contacter le fournisseur"
-#~ msgstr "Nombre total de fournisseurs"
+~ msgid "Contacter le fournisseur"
+~ msgstr "Nombre total de fournisseurs"

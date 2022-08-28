@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-27 20:16+0000\n"
+"POT-Creation-Date: 2022-08-28 07:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -144,7 +144,7 @@ msgid "Account Edited Successfully"
 msgstr ""
 
 #: app_admin/views.py:633
-msgid "An Error Occured. Please Try Again"
+msgid "An Error occurred. Please Try Again"
 msgstr ""
 
 #: app_admin/views.py:659 auth_app/views.py:106
@@ -164,7 +164,7 @@ msgid "Activate Foroden Activation"
 msgstr ""
 
 #: app_admin/views.py:700
-msgid "Account Created Successfully. Verfication link was sent user's email."
+msgid "Account Created Successfully.  A verification link was sent user's email."
 msgstr ""
 
 #: app_admin/views.py:717 auth_app/views.py:193
@@ -456,7 +456,7 @@ msgid "Discussion"
 msgstr ""
 
 #: manager/views.py:303 manager/views.py:352
-msgid "Error Occured. Try Again"
+msgid "Error occurred. Try Again"
 msgstr ""
 
 #: manager/views.py:327
@@ -578,11 +578,11 @@ msgid "Supplier Dashboard"
 msgstr ""
 
 #: supplier/views.py:748
-msgid "Product create successfully."
+msgid "Product created successfully."
 msgstr ""
 
 #: supplier/views.py:752
-msgid "An Error Occured. Try Again"
+msgid "An Error occurred. Try Again"
 msgstr ""
 
 #: supplier/views.py:776
@@ -590,11 +590,11 @@ msgid "Please use a different store name."
 msgstr ""
 
 #: supplier/views.py:781
-msgid "Store create successfully."
+msgid "Store created successfully."
 msgstr ""
 
 #: supplier/views.py:807 supplier/views.py:887
-msgid "Sorry, an error occured. Please Try Again"
+msgid "Sorry, an error occurred. Please Try Again"
 msgstr ""
 
 #: supplier/views.py:857
@@ -602,7 +602,7 @@ msgid "Please use a different service name."
 msgstr ""
 
 #: supplier/views.py:862
-msgid "Service create successfully."
+msgid "Service created successfully."
 msgstr ""
 
 #: templates/app_admin/editProfile.html:30 templates/auth_app/signup.html:33
@@ -635,7 +635,7 @@ msgid "Manager"
 msgstr ""
 
 #: templates/app_admin/utils/layout.html:127
-msgid "Nofications"
+msgid "Notifications"
 msgstr ""
 
 #: templates/auth_app/business_infor.html:10

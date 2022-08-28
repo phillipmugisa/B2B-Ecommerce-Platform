@@ -600,7 +600,7 @@ msgstr "لوحة تحكم المورد"
 
 #: supplier/views.py:748
 #| msgid "Category ({}) created successfully."
-msgid "Product create successfully."
+msgid "Product created successfully."
 msgstr "تم إنشاء المنتج بنجاح."
 
 #: supplier/views.py:752
@@ -614,7 +614,7 @@ msgstr "الرجاء استخدام اسم متجر مختلف."
 
 #: supplier/views.py:781
 #| msgid "Category ({}) created successfully."
-msgid "Store create successfully."
+msgid "Store created successfully."
 msgstr "تم إنشاء المتجر بنجاح."
 
 #: supplier/views.py:807 supplier/views.py:887
@@ -628,7 +628,7 @@ msgstr "الرجاء استخدام اسم خدمة مختلف."
 
 #: supplier/views.py:862
 #| msgid "Service ({name}) created successfully."
-msgid "Service create successfully."
+msgid "Service created successfully."
 msgstr "تم إنشاء الخدمة بنجاح."
 
 #: templates/app_admin/editProfile.html:30 templates/auth_app/signup.html:33
