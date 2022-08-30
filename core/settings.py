@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-g$r%p8=*y8i9vaj2y395i435!rymb3t##8snyqz-q7e_fk8&li"
+SECRET_KEY = ""
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -215,6 +215,6 @@ MODELTRANSLATION_LANGUAGES = ("ar", "fr", "de", "en")
 #     BRAINTREE_PRODUCTION = False
 # else:
 BRAINTREE_PRODUCTION = False
-BRAINTREE_MERCHANT_ID = "zq9jqbg246n5zjt6"
-BRAINTREE_PUBLIC_KEY = "4spv6wdb3xqwbvv4"
-BRAINTREE_PRIVATE_KEY = "4fa06482b576443eaaba4021d89cb9c0"
+BRAINTREE_MERCHANT_ID = ""
+BRAINTREE_PUBLIC_KEY = ""
+BRAINTREE_PRIVATE_KEY = ""
