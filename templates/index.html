@@ -81,6 +81,7 @@
         }
 
         .advert .product {
+            margin-block-end: .2rem;
             height: 14rem;
             padding: .2rem .2rem .6rem .2rem;
             border: 1px solid #f3f3f3;
@@ -146,6 +147,17 @@
             height: 3px;
             border-radius: 3px;
             background-color: #ecab08;
+        }
+
+        @media (max-width: 786px) {
+            .advert .section-item-group {
+                flex-wrap: wrap;
+            }
+
+            .section-heading h2:first-child,
+            .section-heading h2:last-child {
+                display: none;
+            }
         }
     </style>
 
