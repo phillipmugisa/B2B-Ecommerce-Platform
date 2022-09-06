@@ -1566,9 +1566,9 @@
                         <div class="cl cl1">
                             <h1 style="font-size:18px;font-weight:700;text-transform:unset;">Popular Features</h1>
                             <ul>
-                                <li><a href="#">Stores</a></li>
-                                <li><a href="#">Showrooms</a></li>
-                                <li><a href="#">Marketplace</a></li>
+                                <li><a href="1.html">Stores</a></li>
+                                <li><a href="2.html">Showrooms</a></li>
+                                <li><a href="3.html">Marketplace</a></li>
                             </ul>
                         </div>
                         <div class="cl cl2">
@@ -1585,9 +1585,9 @@
                         <div class="cl cl2">
                             <h1 style="font-size:18px;font-weight:700;text-transform:unset;">FAQs</h1>
                             <ul>
-                                <li><a href="#">What is a store?</a></li>
-                                <li><a href="#">What is a showroom?</a></li>
-                                <li><a href="#">How do you create a store?</a></li>
+                                <li><a href="4.html#qn-1">What is a store?</a></li>
+                                <li><a href="4.html#qn-2">What is a showroom?</a></li>
+                                <li><a href="4.html#qn-3">How do you create a store?</a></li>
                             </ul>
                         </div>
                         <div class="cl cl4">
@@ -1651,9 +1651,9 @@
                         </div>
                         <div class="collapsible-content">
                             <ul>
-                                <li><a href="#">Stores</a></li>
-                                <li><a href="#">Showrooms</a></li>
-                                <li><a href="#">Marketplace</a></li>
+                                <li><a href="1.html">Stores</a></li>
+                                <li><a href="2.html">Showrooms</a></li>
+                                <li><a href="3.html">Marketplace</a></li>
                             </ul>
                         </div>
                     </div>
@@ -1678,9 +1678,9 @@
                         </div>
                         <div class="collapsible-content">
                             <ul>
-                                <li><a href="#">What is a store?</a></li>
-                                <li><a href="#">What is a showroom?</a></li>
-                                <li><a href="#">How do you create a store?</a></li>
+                                <li><a href="4.html#qn-1">What is a store?</a></li>
+                                <li><a href="4.html#qn-2">What is a showroom?</a></li>
+                                <li><a href="4.html#qn-3">How do you create a store?</a></li>
                             </ul>
                         </div>
                     </div>
@@ -1729,18 +1729,9 @@
     <script src="../static/js/scripts.js"></script>
 
     <script>
-        const toggleDropdownFoot = document.querySelector('#toggle-dropdown-foot');
-        const dropdownFoot = document.querySelector('.dropdown-foot');
-        toggleDropdownFoot.addEventListener('click', () => {
-            // It looks like tailwind is blocking this class
-            dropdownFoot.classList.toggle('hide');
-        });
-    </script>
-
-    <script>
         $(document).ready(function () {
             $("#banner").owlCarousel({
-                autoPlay: 5000, //Set AutoPlay to 3 seconds
+                autoPlay: 5000,
                 items: 1,
                 itemsDesktop: [1199, 3],
                 itemsDesktopSmall: [979, 3]
