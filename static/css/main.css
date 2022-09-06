@@ -525,7 +525,7 @@ nav.cs-fixed li:hover * {
 
 .fc {
     padding: 2.4rem 0;
-    height: 400px;
+    block-size: fit-content;
     overflow: hidden;
 }
 
