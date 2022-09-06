@@ -50,7 +50,7 @@
             justify-content: space-between;
             align-items: center;
             padding: .8rem 1.2rem;
-            background-color: #ecab08;
+            /* background-color: #ecab08; */
         }
 
         .advert .section-heading .section-graphics {
@@ -65,27 +65,31 @@
             margin: 0 .4rem;
         }
 
-        .advert .section-heading h2 {
-            font-size: 20px;
+        /* .advert .section-heading h2 {
+            font-size: 14px;
             color: #fff;
-        }
+        } */
 
         .advert .section-heading h2:first-child {
             text-transform: uppercase;
         }
 
+        .advert .section-body {
+            
+        }
+
         .advert .section-item-group {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1rem;
         }
 
         .advert .product {
             margin-block-end: .2rem;
-            height: 14rem;
-            padding: .2rem .2rem .6rem .2rem;
+            /* height: 14rem; */
+            /* padding: .2rem .2rem .6rem .2rem; */
             border: 1px solid #f3f3f3;
-            max-inline-size: 9.06rem;
+            /* max-inline-size: 9.06rem; */
             position: relative;
             box-shadow: unset;
         }
@@ -107,6 +111,7 @@
             background-color: bisque;
             padding: .2rem .4rem;
             font-size: .8em;
+            display: none;
         }
 
         .advert .product .item-details {
@@ -151,7 +156,9 @@
 
         @media (max-width: 786px) {
             .advert .section-item-group {
-                flex-wrap: wrap;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
             }
 
             .section-heading h2:first-child,
@@ -746,18 +753,17 @@
         </section>
 
         <section class="main w-12/12">
-            <div class="grid w-full mx-auto cf-1 advert card rounded-md gap-6">
-                <div class="section-heading rounded-t-md">
-                    <div class="section-graphics">
+            <div class="grid w-full mx-auto cf-1 advert card rounded-md pb-2">
+                <div class="section-heading rounded-t-md bg-yellowColorHover">
+                    <div class="section-graphics flex gap-2">
                         <img class="sec-svg" src="../static/assets/imgs/resources/price-tag.svg" alt="Price Tag">
-                        <h2 class="sec-title text-xl md:text-2xl font-bold text-yellowColor">Flash Sales</h2>
+                        <h2 class="sec-title text-lg md:text-xl font-bold text-white">Super Deals</h2>
                     </div>
-                    <h2 class="sec-title text-xl md:text-2xl font-bold text-yellowColor"><span
+                    <!-- <h2 class="sec-title text-base md:text-lg font-bold text-white"><span
                             style="font-weight:100;">Time Left:</span> 01d : 05h : 42m
-                    </h2>
+                    </h2> -->
                     <div class="section-graphics">
-                        <h2 class="sec-title text-xl md:text-2xl font-bold text-yellowColor">See All</h2>
-                        <img class="sec-svg" src="../static/assets/imgs/resources/angle-right.svg" alt="Price Tag">
+                        <h2 class="sec-title text-base font-normal text-white">View All</h2>
                     </div>
                 </div>
                 <div class="section-body">
@@ -768,19 +774,11 @@
                                     src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGhvbmVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
                                     alt="Product" class="item-img rounded"
                                     style="width: 100%;aspect-ratio:1/1;object-fit:cover;">
-                                <div class="item-details grid gap-0 justify-start text-left">
+                                <div class="item-details grid gap-0 justify-start text-left px-3">
                                     <h5 class="text-sm font-semibold leading-5">
                                         <span class="title">Samsung Galaxy A03..</span>
                                     </h5>
                                     <h6 class="text-gray-600 text-xs price-new">USD 3450</h6>
-                                    <s class="text-gray-600 text-xs price-old">USD 3500</s>
-                                    <h6 class="text-gray-600 text-xs">11 items left</h6>
-                                </div>
-                                <div class="status">
-                                    <div class="bar">
-                                        <div class="content-before"></div>
-                                        <div class="content"></div>
-                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -790,19 +788,11 @@
                                     src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGhvbmVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
                                     alt="Product" class="item-img rounded"
                                     style="width: 100%;aspect-ratio:1/1;object-fit:cover;">
-                                <div class="item-details grid gap-0 justify-start text-left">
+                                <div class="item-details grid gap-0 justify-start text-left px-3">
                                     <h5 class="text-sm font-semibold leading-5">
                                         <span class="title">Samsung Galaxy A03..</span>
                                     </h5>
                                     <h6 class="text-gray-600 text-xs price-new">USD 3450</h6>
-                                    <s class="text-gray-600 text-xs price-old">USD 3500</s>
-                                    <h6 class="text-gray-600 text-xs">11 items left</h6>
-                                </div>
-                                <div class="status">
-                                    <div class="bar">
-                                        <div class="content-before"></div>
-                                        <div class="content"></div>
-                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -812,19 +802,11 @@
                                     src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGhvbmVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
                                     alt="Product" class="item-img rounded"
                                     style="width: 100%;aspect-ratio:1/1;object-fit:cover;">
-                                <div class="item-details grid gap-0 justify-start text-left">
+                                <div class="item-details grid gap-0 justify-start text-left px-3">
                                     <h5 class="text-sm font-semibold leading-5">
                                         <span class="title">Samsung Galaxy A03..</span>
                                     </h5>
                                     <h6 class="text-gray-600 text-xs price-new">USD 3450</h6>
-                                    <s class="text-gray-600 text-xs price-old">USD 3500</s>
-                                    <h6 class="text-gray-600 text-xs">11 items left</h6>
-                                </div>
-                                <div class="status">
-                                    <div class="bar">
-                                        <div class="content-before"></div>
-                                        <div class="content"></div>
-                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -834,19 +816,11 @@
                                     src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGhvbmVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
                                     alt="Product" class="item-img rounded"
                                     style="width: 100%;aspect-ratio:1/1;object-fit:cover;">
-                                <div class="item-details grid gap-0 justify-start text-left">
+                                <div class="item-details grid gap-0 justify-start text-left px-3">
                                     <h5 class="text-sm font-semibold leading-5">
                                         <span class="title">Samsung Galaxy A03..</span>
                                     </h5>
                                     <h6 class="text-gray-600 text-xs price-new">USD 3450</h6>
-                                    <s class="text-gray-600 text-xs price-old">USD 3500</s>
-                                    <h6 class="text-gray-600 text-xs">11 items left</h6>
-                                </div>
-                                <div class="status">
-                                    <div class="bar">
-                                        <div class="content-before"></div>
-                                        <div class="content"></div>
-                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -856,19 +830,11 @@
                                     src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGhvbmVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
                                     alt="Product" class="item-img rounded"
                                     style="width: 100%;aspect-ratio:1/1;object-fit:cover;">
-                                <div class="item-details grid gap-0 justify-start text-left">
+                                <div class="item-details grid gap-0 justify-start text-left px-3">
                                     <h5 class="text-sm font-semibold leading-5">
                                         <span class="title">Samsung Galaxy A03..</span>
                                     </h5>
                                     <h6 class="text-gray-600 text-xs price-new">USD 3450</h6>
-                                    <s class="text-gray-600 text-xs price-old">USD 3500</s>
-                                    <h6 class="text-gray-600 text-xs">11 items left</h6>
-                                </div>
-                                <div class="status">
-                                    <div class="bar">
-                                        <div class="content-before"></div>
-                                        <div class="content"></div>
-                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -878,85 +844,11 @@
                                     src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGhvbmVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
                                     alt="Product" class="item-img rounded"
                                     style="width: 100%;aspect-ratio:1/1;object-fit:cover;">
-                                <div class="item-details grid gap-0 justify-start text-left">
+                                <div class="item-details grid gap-0 justify-start text-left px-3">
                                     <h5 class="text-sm font-semibold leading-5">
                                         <span class="title">Samsung Galaxy A03..</span>
                                     </h5>
                                     <h6 class="text-gray-600 text-xs price-new">USD 3450</h6>
-                                    <s class="text-gray-600 text-xs price-old">USD 3500</s>
-                                    <h6 class="text-gray-600 text-xs">11 items left</h6>
-                                </div>
-                                <div class="status">
-                                    <div class="bar">
-                                        <div class="content-before"></div>
-                                        <div class="content"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="product card">
-                            <a class="grid gap-0.5" href="./subcategory.html">
-                                <img loading="lazy"
-                                    src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGhvbmVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                                    alt="Product" class="item-img rounded"
-                                    style="width: 100%;aspect-ratio:1/1;object-fit:cover;">
-                                <div class="item-details grid gap-0 justify-start text-left">
-                                    <h5 class="text-sm font-semibold leading-5">
-                                        <span class="title">Samsung Galaxy A03..</span>
-                                    </h5>
-                                    <h6 class="text-gray-600 text-xs price-new">USD 3450</h6>
-                                    <s class="text-gray-600 text-xs price-old">USD 3500</s>
-                                    <h6 class="text-gray-600 text-xs">11 items left</h6>
-                                </div>
-                                <div class="status">
-                                    <div class="bar">
-                                        <div class="content-before"></div>
-                                        <div class="content"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="product card">
-                            <a class="grid gap-0.5" href="./subcategory.html">
-                                <img loading="lazy"
-                                    src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGhvbmVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                                    alt="Product" class="item-img rounded"
-                                    style="width: 100%;aspect-ratio:1/1;object-fit:cover;">
-                                <div class="item-details grid gap-0 justify-start text-left">
-                                    <h5 class="text-sm font-semibold leading-5">
-                                        <span class="title">Samsung Galaxy A03..</span>
-                                    </h5>
-                                    <h6 class="text-gray-600 text-xs price-new">USD 3450</h6>
-                                    <s class="text-gray-600 text-xs price-old">USD 3500</s>
-                                    <h6 class="text-gray-600 text-xs">11 items left</h6>
-                                </div>
-                                <div class="status">
-                                    <div class="bar">
-                                        <div class="content-before"></div>
-                                        <div class="content"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="product card">
-                            <a class="grid gap-0.5" href="./subcategory.html">
-                                <img loading="lazy"
-                                    src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGhvbmVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                                    alt="Product" class="item-img rounded"
-                                    style="width: 100%;aspect-ratio:1/1;object-fit:cover;">
-                                <div class="item-details grid gap-0 justify-start text-left">
-                                    <h5 class="text-sm font-semibold leading-5">
-                                        <span class="title">Samsung Galaxy A03..</span>
-                                    </h5>
-                                    <h6 class="text-gray-600 text-xs price-new">USD 3450</h6>
-                                    <s class="text-gray-600 text-xs price-old">USD 3500</s>
-                                    <h6 class="text-gray-600 text-xs">11 items left</h6>
-                                </div>
-                                <div class="status">
-                                    <div class="bar">
-                                        <div class="content-before"></div>
-                                        <div class="content"></div>
-                                    </div>
                                 </div>
                             </a>
                         </div>

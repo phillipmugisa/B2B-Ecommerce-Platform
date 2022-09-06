@@ -14,6 +14,9 @@
 
     <title>Golden - GOLDEN</title>
     <style>
+        body {
+            scroll-behavior: smooth;
+        }
         .about-us {
             display: flex;
             justify-content: center;
@@ -285,6 +288,7 @@
                 placeholder="Search">
         </form>
     </header>
+
     <div class="mobile-menu gap-4 bg-backgroundColor content-start px-4" id="mobile-menu">
         <div class="menu-header py-6 grid gap-2 justify-center">
             <div class="logo-wrapper justify-self-center">
@@ -478,10 +482,10 @@
 
     <main class="grid gap-2 md:gap-4">
         <section class="main">
-            <div class="container" style="border-bottom:2px solid var(--brand-primary);margin-block-start:1.4rem;">
-                <div class="about-us">
+            <div class="container" style="border-bottom:1px solid var(--brand-primary);margin-block-start:1.4rem;">
+                <div class="about-us gap-2">
                     <h1>About Us</h1>
-                    <div class="statements">
+                    <div class="statements text-slate-600 font-normal">
                         <a href="#our-history">
                             <h4 class="our-history">History</h4>
                         </a>
@@ -497,9 +501,9 @@
                     </div>
                 </div>
             </div>
-            <div class="container about-us-image">
+            <!-- <div class="container about-us-image">
                 <img src="../static/assets/imgs/resources/02.jpg" alt="About Image">
-            </div>
+            </div> -->
         </section>
 
         <section class="main w-12/12 py-6 pt-0" style="background-color: #FFFFFF;" id="about-us">
@@ -546,7 +550,7 @@
                 </div>
             </div>
         </section>
-        <section class="grid gap-10 about-us-content">
+        <section class="grid gap-10 about-us-content py-10">
             <div id="our-mission"
                 class="md:grid right md:grid-cols-2 gap-20 w-12/12 md:w-10/12 mx-auto overflow-hidden">
                 <div class="grid gap-4 content-center about-description">
