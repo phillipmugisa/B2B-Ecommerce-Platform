@@ -10,9 +10,94 @@
     <link rel="stylesheet" href="../static/css/responsive.css">
     <link rel="stylesheet" href="../static/icons/themify-icons.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="../static/icons/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"  type='text/css'>
+    <link href="../static/icons/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type='text/css'>
 
     <title>Golden - GOLDEN</title>
+    <style>
+        .about-us {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 1.8rem;
+        }
+
+        .about-us h1 {
+            font-size: 24px;
+            font-weight: bolder;
+        }
+
+        .about-us-image {
+            inline-size: 100%;
+            block-size: 450px;
+        }
+
+        .about-us-image img {
+            inline-size: 100%;
+            block-size: 100%;
+        }
+
+        .statements {
+            margin: .8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .our-history,
+        .our-statistics,
+        .our-mission {
+            padding: 0 .8rem;
+            border-right: 1px solid #000;
+        }
+
+        .our-history,
+        .our-statistics,
+        .our-mission,
+        .our-vision {
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .our-history:hover,
+        .our-statistics:hover,
+        .our-mission:hover,
+        .our-vision:hover {
+            text-decoration: underline;
+        }
+
+        .what-we-do {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            block-size: 250px;
+            inline-size: 100%;
+        }
+
+        .what-we-do-items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .what-we-do-item {
+            inline-size: 100rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .what-we-do-item img {
+            block-size: 90px;
+            inline-size: 90px;
+        }
+
+        .what-we-do-item h3 {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <script>
@@ -66,14 +151,17 @@
                 <div class="temp-nav py-3 grid content-center w-12/12 gap-1">
                     <div class="header-left grid items-center">
                         <div class="logo-wrapper">
-                            <img src="../static/assets/imgs/resources/logo_trans.png" alt="Logo" class="logo" style="object-fit: cover;">
+                            <img src="../static/assets/imgs/resources/logo_trans.png" alt="Logo" class="logo"
+                                style="object-fit: cover;">
                         </div>
                     </div>
                     <form action="" class="search-form grid w-12/12 gap-0 justify-items-stretch">
-                        <input type="search" name="search-bar" id="search-bar" class="py-3 px-6 rounded-tl-md rounded-bl-md focus:outline-none text-lghterBackgroundColor"
+                        <input type="search" name="search-bar" id="search-bar"
+                            class="py-3 px-6 rounded-tl-md rounded-bl-md focus:outline-none text-lghterBackgroundColor"
                             placeholder="Search">
 
-                            <button type="submit" class="grid place-items-center bg-yellowColor rounded-tr-md rounded-br-md">
+                        <button type="submit"
+                            class="grid place-items-center bg-yellowColor rounded-tr-md rounded-br-md">
                             <i class="ti-search"></i>
                         </button>
                     </form>
@@ -88,7 +176,8 @@
                                     EN
                                 </span>
                             </a>
-                            <ul class="dropdown-list   list-none list-outside bg-lghterBackgroundColor overflow-hidden rounded-md text-base">
+                            <ul
+                                class="dropdown-list   list-none list-outside bg-lghterBackgroundColor overflow-hidden rounded-md text-base">
                                 <li>
                                     <a class="grid items-center py-3 px-8" href="">English</a>
                                 </li>
@@ -113,7 +202,8 @@
                                     <i class="ti-angle-down font-bold"></i>
                                 </span>
                             </a>
-                            <ul class="dropdown-list   list-none list-outside bg-lghterBackgroundColor overflow-hidden rounded-md text-base">
+                            <ul
+                                class="dropdown-list   list-none list-outside bg-lghterBackgroundColor overflow-hidden rounded-md text-base">
                                 <li>
                                     <a class="grid items-center py-3 px-8" href="">Profile</a>
                                 </li>
@@ -141,15 +231,21 @@
     <nav class="hidden md:grid desktop w-12/12 bg-lghterBackgroundColor">
         <div class="w-full mx-auto flex justify-between  overflow-hidden">
             <ul class="flex text-base text-white">
-                <li><a class="grid py-3 px-4 hover:bg-lighterBackgroundColorHover transition-colors transition-200 ease-in" href="./index.html">Home</a></li>
-                <li><a class="grid py-3 px-4 hover:bg-lighterBackgroundColorHover transition-colors transition-200 ease-in" href="./about.html">About us</a></li>
-                <li><a class="grid py-3 px-4 hover:bg-lighterBackgroundColorHover transition-colors transition-200 ease-in" href="./services.html">Services</a></li>
-                <li><a class="grid py-3 px-4 hover:bg-lighterBackgroundColorHover transition-colors transition-200 ease-in" href="#">Products</a></li>
-                <li><a class="grid py-3 px-4 hover:bg-lighterBackgroundColorHover transition-colors transition-200 ease-in" href="#">Contact</a></li>
+                <li><a class="grid py-3 px-4 hover:bg-lighterBackgroundColorHover transition-colors transition-200 ease-in"
+                        href="./index.html">Home</a></li>
+                <li><a class="grid py-3 px-4 hover:bg-lighterBackgroundColorHover transition-colors transition-200 ease-in"
+                        href="./about.html">About us</a></li>
+                <li><a class="grid py-3 px-4 hover:bg-lighterBackgroundColorHover transition-colors transition-200 ease-in"
+                        href="./services.html">Services</a></li>
+                <li><a class="grid py-3 px-4 hover:bg-lighterBackgroundColorHover transition-colors transition-200 ease-in"
+                        href="#">Products</a></li>
+                <li><a class="grid py-3 px-4 hover:bg-lighterBackgroundColorHover transition-colors transition-200 ease-in"
+                        href="#">Contact</a></li>
             </ul>
-            
+
             <ul class="flex text-base text-white">
-                <li><a class="grid py-3 px-4 bg-yellowColor hover:bg-yellowColorHover font-semibold transition-colors transition-200 ease-in" href="#">Sell On Foroden</a></li>
+                <li><a class="grid py-3 px-4 bg-yellowColor hover:bg-yellowColorHover font-semibold transition-colors transition-200 ease-in"
+                        href="#">Sell On Foroden</a></li>
             </ul>
         </div>
     </nav>
@@ -159,41 +255,49 @@
     <!-- mobile -->
     <header class="md:hidden mobile w-12/12 bg-backgroundColor">
         <nav class="temp-nav py-3 w-full mx-auto grid content-center w-12/border-white gap-2">
-            <div class="header-left flex items-center justify-start items-center content-center gap-2" style="grid-template-columns: .4fr 1fr;">
+            <div class="header-left flex items-center justify-start items-center content-center gap-2"
+                style="grid-template-columns: .4fr 1fr;">
                 <button class="text-white rounded-md py-0 px-2" id="mobile-menu-activator">
                     <i class="fa fa-bars"></i>
                 </button>
                 <div class="logo-wrapper">
-                    <img src="../static/assets/imgs/resources/logo_trans.png" alt="Logo" class="logo" style="object-fit: cover;">
+                    <img src="../static/assets/imgs/resources/logo_trans.png" alt="Logo" class="logo"
+                        style="object-fit: cover;">
                 </div>
             </div>
             <div class="flex items-center gap-2 justify-end">
-                <button id="mobile-searchbar-activator"  class="text-white border py-0 px-2 outline-none border-none px-4 py-2">
+                <button id="mobile-searchbar-activator"
+                    class="text-white border py-0 px-2 outline-none border-none px-4 py-2">
                     <i class="fa fa-search text-white"></i>
                 </button>
                 <button class="text-white border py-0 px-2 outline-none border-none px-4 py-2">
                     <i class="fa fa-globe text-white"></i>
                 </button>
-                <a href="" class="flex place-items-center px-4 py-2 text-base bg-yellowColor focus:bg-yellowColorHover duration-200 transition-all ease-in text-white font-semibold">
+                <a href=""
+                    class="flex place-items-center px-4 py-2 text-base bg-yellowColor focus:bg-yellowColorHover duration-200 transition-all ease-in text-white font-semibold">
                     Sign In
                 </a>
             </div>
         </nav>
         <form action="" id="mobile-searchbar" class="search-form-mobile w-full mx-auto mx-auto py-3 gap-0">
-            <input type="search" name="search-bar" id="search-bar" class="py-3 px-6 w-12/12 rounded-md rounded-md focus:outline-none text-lghterBackgroundColor"
+            <input type="search" name="search-bar" id="search-bar"
+                class="py-3 px-6 w-12/12 rounded-md rounded-md focus:outline-none text-lghterBackgroundColor"
                 placeholder="Search">
         </form>
     </header>
-    <div class="mobile-menu gap-4 bg-backgroundColor content-start px-4" id="mobile-menu">            
+    <div class="mobile-menu gap-4 bg-backgroundColor content-start px-4" id="mobile-menu">
         <div class="menu-header py-6 grid gap-2 justify-center">
             <div class="logo-wrapper justify-self-center">
-                <img src="../static/assets/imgs/resources/logo_trans.png" alt="Logo" class="logo" style="object-fit: cover;">
+                <img src="../static/assets/imgs/resources/logo_trans.png" alt="Logo" class="logo"
+                    style="object-fit: cover;">
             </div>
             <div class="flex gap-2 justify-center auth">
-                <a href="" class="flex place-items-center px-6 py-2 text-base bg-lighterBackgroundColorHover focus:bg-yellowColorHover duration-200 transition-all ease-in text-white font-semibold">
+                <a href=""
+                    class="flex place-items-center px-6 py-2 text-base bg-lighterBackgroundColorHover focus:bg-yellowColorHover duration-200 transition-all ease-in text-white font-semibold">
                     Sign In
                 </a>
-                <a href="" class="flex place-items-center px-6 py-2 text-base bg-yellowColor focus:bg-yellowColorHover duration-200 transition-all ease-in text-white font-semibold">
+                <a href=""
+                    class="flex place-items-center px-6 py-2 text-base bg-yellowColor focus:bg-yellowColorHover duration-200 transition-all ease-in text-white font-semibold">
                     Sign Up
                 </a>
             </div>
@@ -204,36 +308,31 @@
         <div class="menu-body grid gap-4 items-start">
             <div class="grid gap-3">
                 <ul class="text-slate-300 grid gap-3">
-                    <li
-                        class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
+                    <li class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
                         <a class="flex items-center justify-start gap-2 py-2" href="./index.html">
                             <i class="ti-folder"></i>
                             <span>Home</span>
                         </a>
                     </li>
-                    <li
-                        class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
+                    <li class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
                         <a class="flex items-center justify-start gap-2 py-2" href="./about.html">
                             <i class="ti-car"></i>
                             <span>About Us</span>
                         </a>
                     </li>
-                    <li
-                        class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
+                    <li class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
                         <a class="flex items-center justify-start gap-2 py-2" href="./services.html">
                             <i class="ti-camera"></i>
                             <span>Services</span>
                         </a>
                     </li>
-                    <li
-                        class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
+                    <li class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
                         <a class="flex items-center justify-start gap-2 py-2" href="./showrooms.html">
                             <i class="ti-link"></i>
                             <span>Showrooms</span>
                         </a>
                     </li>
-                    <li
-                        class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
+                    <li class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
                         <a class="flex items-center justify-start gap-2 py-2" href="./index.html">
                             <i class="ti-file"></i>
                             <span>Support</span>
@@ -247,50 +346,43 @@
                     Categories for you
                 </h4>
                 <ul class="text-slate-300 grid gap-2 pl-4">
-                    <li
-                        class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
+                    <li class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
                         <a class="flex items-center justify-start gap-2 py-2" href="./category.html">
                             <i class="ti-folder"></i>
                             <span>Agricultural Mahinery</span>
                         </a>
                     </li>
-                    <li
-                        class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
+                    <li class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
                         <a class="flex items-center justify-start gap-2 py-2" href="./category.html">
                             <i class="ti-car"></i>
                             <span>Agro Supplies</span>
                         </a>
                     </li>
-                    <li
-                        class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
+                    <li class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
                         <a class="flex items-center justify-start gap-2 py-2" href="./category.html">
                             <i class="ti-camera"></i>
                             <span>Automotive - Vehicles</span>
                         </a>
                     </li>
-                    <li
-                        class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
+                    <li class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
                         <a class="flex items-center justify-start gap-2 py-2" href="./category.html">
                             <i class="ti-link"></i>
                             <span>Baby Products & Accessories</span>
                         </a>
                     </li>
-                    <li
-                        class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
+                    <li class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
                         <a class="flex items-center justify-start gap-2 py-2" href="./category.html">
                             <i class="ti-file"></i>
                             <span>Chemical Industry</span>
                         </a>
                     </li>
-                    <li
-                        class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
+                    <li class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
                         <a class="flex items-center justify-start gap-2 py-2" href="./category.html">
                             <i class="ti-dashboard"></i>
                             <span>Clothing - Fashion</span>
                         </a>
                     </li>
-                    <li
-                        class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
+                    <li class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
                         <a class="flex items-center justify-start gap-2 py-2" href="./category.html">
                             <i class="ti-pencil"></i>
                             <span>Construction & Building</span>
@@ -304,36 +396,31 @@
                     Showrooms
                 </h4>
                 <ul class="text-slate-300 grid gap-2 pl-4">
-                    <li
-                        class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
+                    <li class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
                         <a class="flex items-center justify-start gap-2 py-2" href="#">
                             <i class="ti-folder"></i>
                             <span>Oman - Muscat</span>
                         </a>
                     </li>
-                    <li
-                        class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
+                    <li class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
                         <a class="flex items-center justify-start gap-2 py-2" href="#">
                             <i class="ti-car"></i>
                             <span>UAE - Dubai</span>
                         </a>
                     </li>
-                    <li
-                        class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
+                    <li class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
                         <a class="flex items-center justify-start gap-2 py-2" href="#">
                             <i class="ti-camera"></i>
                             <span>Kuwait - Kuwait</span>
                         </a>
                     </li>
-                    <li
-                        class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
+                    <li class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
                         <a class="flex items-center justify-start gap-2 py-2" href="#">
                             <i class="ti-link"></i>
                             <span>Qatar - Doha</span>
                         </a>
                     </li>
-                    <li
-                        class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
+                    <li class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
                         <a class="flex items-center justify-start gap-2 py-2" href="#">
                             <i class="ti-file"></i>
                             <span>Saudi Arabia - Riyadh</span>
@@ -347,29 +434,25 @@
                     Languages
                 </h4>
                 <ul class="text-slate-300 grid gap-2 pl-4">
-                    <li
-                        class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
+                    <li class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
                         <a class="flex items-center justify-start gap-2 py-2" href="#">
                             <i class="ti-folder"></i>
                             <span>English</span>
                         </a>
                     </li>
-                    <li
-                        class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
+                    <li class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
                         <a class="flex items-center justify-start gap-2 py-2" href="#">
                             <i class="ti-car"></i>
                             <span>Arabic</span>
                         </a>
                     </li>
-                    <li
-                        class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
+                    <li class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
                         <a class="flex items-center justify-start gap-2 py-2" href="#">
                             <i class="ti-camera"></i>
                             <span>French</span>
                         </a>
                     </li>
-                    <li
-                        class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
+                    <li class="text-slate-200 hover:text-white transition-colors transition-200 ease-in">
                         <a class="flex items-center justify-start gap-2 py-2" href="#">
                             <i class="ti-link"></i>
                             <span>Spanish</span>
@@ -394,55 +477,113 @@
     <!-- mobile -->
 
     <main class="grid gap-2 md:gap-4">
-        <!-- <div class="block bg-white px-5">
-            <div class="breadcrumb flex flex-wrap justify-start gap-2 md:w-full md:mx-auto py-6 justify-self-start">
-                <a class="text-gray-600 hover:text-gray-900" href="./index.html">Home</a>
-                <a>/</a>
-                <span class="text-lightBackgroundColor">About Us</span>
+        <section class="main">
+            <div class="container" style="border-bottom:2px solid var(--brand-primary);margin-block-start:1.4rem;">
+                <div class="about-us">
+                    <h1>About Us</h1>
+                    <div class="statements">
+                        <a href="#our-history">
+                            <h4 class="our-history">History</h4>
+                        </a>
+                        <a href="#our-statistics">
+                            <h4 class="our-statistics">Statistics</h4>
+                        </a>
+                        <a href="#our-mission">
+                            <h4 class="our-mission">Mission</h4>
+                        </a>
+                        <a href="#our-vision">
+                            <h4 class="our-vision" style="padding:0 .8rem;">Vision</h4>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div> -->
+            <div class="container about-us-image">
+                <img src="../static/assets/imgs/resources/02.jpg" alt="About Image">
+            </div>
+        </section>
 
-        <section class="main w-12/12 py-6 pt-0" style="background-color: #FFFFFF;">
-            <div class="grid gap-2 w-12/12 about-intro" style="background-color: rgb(242, 245, 248);">
+        <section class="main w-12/12 py-6 pt-0" style="background-color: #FFFFFF;" id="about-us">
+            <div class="what-we-do" style="background-color: rgb(242, 245, 248);padding-block:10.4rem;">
+                <div class="container what-we-do-items">
+                    <div class="what-we-do-item">
+                        <img src="../static/assets/imgs/resources/03.png" alt="">
+                        <h3>We won 3</h3>
+                        <h3>innovation</h3>
+                        <h3>stores</h3>
+                    </div>
+                    <div class="what-we-do-item">
+                        <img src="../static/assets/imgs/resources/04.png" alt="">
+                        <h3>Dedicated team</h3>
+                        <h3>to offer</h3>
+                        <h3>24h support</h3>
+                    </div>
+                    <div class="what-we-do-item">
+                        <img src="../static/assets/imgs/resources/05.png" alt="">
+                        <h3>Providing a 100%</h3>
+                        <h3>authentic</h3>
+                        <h3>stores</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main w-12/12 py-6 pt-0" style="background-color: #FFFFFF;" id="about-us">
+            <div id="our-history" class="grid gap-2 w-12/12 about-intro" style="background-color: rgb(242, 245, 248);">
                 <div class="grid gap-2 justify-center">
-                    <h4 class="text-xl md:text-2xl text-gray-600 font-bold">
-                        About Us
+                    <h4 class="text-xl md:text-2xl text-gray-600 font-bold" style="font-family: serif;">
+                        History
                     </h4>
                 </div>
                 <div class="grid gap-2">
-                    <p class="text-lightBackgroundColor text-3xl md:text-4xl text-semi-bold w-full md:w-8/12 mx-auto text-center" style="font-family: serif;">
-                        We are empowering entrepreneurs around the world to chase their dreams.
+                    <p class="text-lightBackgroundColor text-3xl md:text-4xl text-semi-bold w-full md:w-8/12 mx-auto text-center"
+                        style="text-align: justify;font-size:18.8px;line-height: unset;">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, dolores a, optio incidunt iure ea
+                        et veritatis repudiandae quibusdam fugit, velit veniam unde voluptates est repellat laudantium
+                        obcaecati asperiores! Exercitationem libero accusamus rerum hic facilis placeat voluptatum
+                        cumque molestias cupiditate dolorum fugit excepturi similique dolorem, consequatur, culpa quis
+                        tempora modi!
                     </p>
                 </div>
             </div>
         </section>
         <section class="grid gap-10 about-us-content">
-            <div class="md:grid right md:grid-cols-2 gap-20 w-12/12 md:w-10/12 mx-auto overflow-hidden">
+            <div id="our-mission"
+                class="md:grid right md:grid-cols-2 gap-20 w-12/12 md:w-10/12 mx-auto overflow-hidden">
                 <div class="grid gap-4 content-center about-description">
-                    <h2 class="text-xl md:text-2xl font-semibold text-lightBackgroundColor" style="font-family: serif">Vision Statement</h2>
-                    <p class="text-base md:text-lg text-slate-700">
-                        Now more than ever, consumers are choosing to support local shops over big-box chains. There are millions of thriving small businesses in North America and Europe alone, who collectively represent a $2T market. With our global community and the power of technology, Faire is helping fuel the growth of entrepreneurs everywhere.
+                    <h2 class="text-xl md:text-2xl font-semibold text-lightBackgroundColor" style="font-family: serif">
+                        Mission Statement</h2>
+                    <p class="text-base md:text-lg text-slate-700" style="text-align: justify;">
+                        Now more than ever, consumers are choosing to support local shops over big-box chains. There are
+                        millions of thriving small businesses in North America and Europe alone, who collectively
+                        represent a $2T market. With our global community and the power of technology, Faire is helping
+                        fuel the growth of entrepreneurs everywhere.
                     </p>
                 </div>
                 <div class="grid gap-2 img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1542744174-a35e40ade835?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHNhbGVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                    <img src="https://images.unsplash.com/photo-1542744174-a35e40ade835?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHNhbGVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                        alt="">
                 </div>
             </div>
-            <div class="md:grid left md:grid-cols-2 gap-20 w-12/12 md:w-10/12 mx-auto overflow-hidden">
+            <div id="our-vision" class="md:grid left md:grid-cols-2 gap-20 w-12/12 md:w-10/12 mx-auto overflow-hidden">
                 <div class="grid gap-2 img-wrapper  hidden md:grid">
-                    <img src="https://images.unsplash.com/photo-1467318339494-a32c2ada54d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fG9mZmljZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="">
+                    <img src="https://images.unsplash.com/photo-1467318339494-a32c2ada54d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fG9mZmljZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                        alt="">
                 </div>
                 <div class="grid gap-2 md:gap-4 content-center about-description">
-                    <h2 class="text-xl md:text-2xl font-semibold text-lightBackgroundColor" style="font-family: serif">Vision Statement</h2>
-                    <p class="text-base md:text-lg text-slate-700">
-                        Now more than ever, consumers are choosing to support local shops over big-box chains. There are millions of thriving small businesses in North America and Europe alone, who collectively represent a $2T market. With our global community and the power of technology, Faire is helping fuel the growth of entrepreneurs everywhere.
+                    <h2 class="text-xl md:text-2xl font-semibold text-lightBackgroundColor" style="font-family: serif">
+                        Vision Statement</h2>
+                    <p class="text-base md:text-lg text-slate-700" style="text-align: justify;">
+                        Now more than ever, consumers are choosing to support local shops over big-box chains. There are
+                        millions of thriving small businesses in North America and Europe alone, who collectively
+                        represent a $2T market. With our global community and the power of technology, Faire is helping
+                        fuel the growth of entrepreneurs everywhere.
                     </p>
                 </div>
             </div>
         </section>
 
         <section class="grid bg-lghterBackgroundColor my-4">
-            <div class="stats grid gap-4 grid-cols-1 md:grid-cols-4 w-10/12 mx-auto justify-start">
+            <div id="our-statistics" class="stats grid gap-4 grid-cols-1 md:grid-cols-4 w-10/12 mx-auto justify-start">
                 <div class="grid gap-1 stats-card">
                     <span class="num font-semibold text-white">50,000</span>
                     <span class="text-xl md:text-2xl text-white font-semibold">Suppliers</span>
