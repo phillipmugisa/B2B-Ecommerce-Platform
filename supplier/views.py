@@ -1,4 +1,5 @@
 from re import sub
+from unicodedata import category
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.views import View
@@ -226,7 +227,9 @@ class ProductListView(View):
         # get query parameters
         min_price = self.request.GET.get("min-price", 0)
         max_price = self.request.GET.get("max-price", None)
-        supplier = self.request.GET.get("supplier", "All")
+        supplier = self.request.GET.get("supplier", "all")
+        country = self.request.GET.get("country", "all")
+        category = self.request.GET.get("category", "all")
         search = self.request.GET.get("search", None)
 
         if max_price and supplier != "All":
@@ -246,7 +249,7 @@ class ProductListView(View):
                 Q(price__lte=float(max_price)),
             )
 
-        elif supplier != "All":
+        elif supplier != "all":
             return SupplierModels.Product.objects.filter(
                 Q(price__gte=float(min_price) if min_price else float(0)),
                 Q(
@@ -254,6 +257,22 @@ class ProductListView(View):
                         clientprofile__business_name=supplier
                     ).first()
                 ),
+            )
+
+        elif country != "all":
+            return SupplierModels.Product.objects.filter(
+                Q(price__gte=float(min_price) if min_price else float(0)),
+                Q(
+                    store__supplier=AuthModels.Supplier.supplier.filter(
+                        clientprofile__country=country
+                    ).first()
+                ),
+            )
+
+        elif category != "all":
+            return SupplierModels.Product.objects.filter(
+                Q(price__gte=float(min_price) if min_price else float(0)),
+                Q(category__name=category),
             )
 
         elif search:
@@ -323,6 +342,14 @@ class ProductListView(View):
             "context_name": "suppliers",
             "results": AuthModels.Supplier.supplier.all(),
         }
+        context_data["countries"] = {
+            "context_name": "countries",
+            "results": AuthModels.ClientProfile.objects.all().only("country")
+        }
+        context_data["categories"] = {
+            "context_name": "categories",
+            "results": SupplierModels.ProductCategory.objects.all().only("name")
+        }
 
         context_data["price_limits"] = {
             "context_name": "price-limits",
@@ -332,10 +359,15 @@ class ProductListView(View):
             },
         }
 
-        context_data["supplier_filter"] = {
-            "context_name": "supplier-filter",
-            "results": self.request.GET.get("supplier", 0),
-        }
+        # context_data["supplier_filter"] = {
+        #     "context_name": "supplier-filter",
+        #     "results": self.request.GET.get("supplier", 0),
+        # }
+
+        # context_data["location_filter"] = {
+        #     "context_name": "location-filter",
+        #     "results": self.request.GET.get("location", 0),
+        # }
 
         return context_data
 
@@ -349,10 +381,13 @@ class ProductDetailView(DetailView):
         response = render(request, self.get_template_names(), context=context)
 
         if request.COOKIES.get("user_categories", None):
-            user_categories = str(self.object.category.id) + "," + request.COOKIES.get("user_categories")
+            user_categories = (
+                str(self.object.category.id)
+                + ","
+                + request.COOKIES.get("user_categories")
+            )
         else:
             user_categories = str(self.object.category.id)
-            
 
         response.set_cookie("user_categories", value=user_categories)
 
@@ -363,13 +398,17 @@ class ProductDetailView(DetailView):
         product = self.get_object()
 
         if self.request.COOKIES.get("user_categories", None):
-            user_categories = [ int(id) for id in self.request.COOKIES.get("user_categories").split(',')]
+            user_categories = [
+                int(id) for id in self.request.COOKIES.get("user_categories").split(",")
+            ]
         else:
             user_categories = []
 
         context["user_categories"] = {
             "context_name": "user categories",
-            "results": SupplierModels.ProductCategory.objects.filter(id__in=user_categories)[:4]
+            "results": SupplierModels.ProductCategory.objects.filter(
+                id__in=user_categories
+            )[:4],
         }
 
         context["view_name"] = product.name
@@ -383,7 +422,7 @@ class ProductDetailView(DetailView):
         }
         context["product_images"] = {
             "context_name": "product-images",
-            "results": SupplierModels.ProductImage.objects.filter(product=product)
+            "results": SupplierModels.ProductImage.objects.filter(product=product),
         }
         context["tags"] = SupplierModels.ProductTag.objects.filter(product=product)
         context["products"] = {
@@ -432,12 +471,13 @@ class ProductDetailView(DetailView):
                     "main_image": SupplierModels.ProductImage.objects.filter(
                         product=product
                     ).first(),
-                    "sub_images": SupplierModels.ProductImage.objects.filter(product=product)[1:4],
+                    "sub_images": SupplierModels.ProductImage.objects.filter(
+                        product=product
+                    )[1:4],
                 }
                 for product in SupplierModels.Product.objects.all().order_by("-id")[:6]
             ],
         }
-        
 
         context["category_group"] = {
             "context_name": "product-category-group",
@@ -445,21 +485,24 @@ class ProductDetailView(DetailView):
             "results": [
                 {
                     "subcategory": subcategory,
-                    "results" :
-                        [
-                            {
-                                "product": product,
-                                "main_image": SupplierModels.ProductImage.objects.filter(
-                                    product=product
-                                ).first(),
-                            }
-                            for product in subcategory.product_set.all()[:2]
-                        ]                                               
+                    "results": [
+                        {
+                            "product": product,
+                            "main_image": SupplierModels.ProductImage.objects.filter(
+                                product=product
+                            ).first(),
+                        }
+                        for product in subcategory.product_set.all()[:2]
+                    ],
                 }
-                for subcategory in SupplierModels.ProductSubCategory.objects.filter(category=product.category) if subcategory.product_set.count() > 1
-            ]
+                for subcategory in SupplierModels.ProductSubCategory.objects.filter(
+                    category=product.category
+                )
+                if subcategory.product_set.count() > 1
+            ],
         }
         return context
+
 
 class NewArrivalView(View):
     template_name = "supplier/promotions.html"
@@ -681,7 +724,8 @@ class SubCategoryDetailView(View):
         # get query parameters
         min_price = self.request.GET.get("min-price", 0)
         max_price = self.request.GET.get("max-price", None)
-        supplier = self.request.GET.get("supplier", "All")
+        supplier = self.request.GET.get("supplier", "all")
+        country = self.request.GET.get("country", "all")
         showroom = self.request.GET.get("showroom", None)
 
         if max_price and supplier != "All":
@@ -703,13 +747,24 @@ class SubCategoryDetailView(View):
                 Q(price__lte=float(max_price)),
             )
 
-        elif supplier != "All":
+        elif supplier != "all":
             return SupplierModels.Product.objects.filter(
                 Q(sub_category=subcategory),
                 Q(price__gte=float(min_price) if min_price else float(0)),
                 Q(
                     store__supplier=AuthModels.Supplier.supplier.filter(
                         clientprofile__business_name=supplier
+                    ).first()
+                ),
+            )
+
+        elif country != "all":
+            return SupplierModels.Product.objects.filter(
+                Q(sub_category=subcategory),
+                Q(price__gte=float(min_price) if min_price else float(0)),
+                Q(
+                    store__supplier=AuthModels.Supplier.supplier.filter(
+                        clientprofile__country=country
                     ).first()
                 ),
             )
@@ -835,6 +890,10 @@ class SubCategoryDetailView(View):
         context_data["suppliers"] = {
             "context_name": "suppliers",
             "results": AuthModels.Supplier.supplier.all(),
+        }
+        context_data["countries"] = {
+            "context_name": "countries",
+            "results": AuthModels.ClientProfile.objects.all().only("country")
         }
 
         context_data["price_limits"] = {
