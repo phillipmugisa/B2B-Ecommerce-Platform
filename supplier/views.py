@@ -64,8 +64,8 @@ class SupplierDetailView(DetailView):
                 if supplier.user in [store.supplier for store in product.store.all()]
             ],
         }
-        context["related_stores"] = {
-            "context_name": "related-stores",
+        context["stores"] = {
+            "context_name": "stores",
             "results": SupplierModels.Store.objects.filter(Q(supplier=supplier.user))[
                 :10
             ],
@@ -236,11 +236,11 @@ class ProductListView(View):
             return SupplierModels.Product.objects.filter(
                 Q(price__gte=float(min_price) if min_price else float(0)),
                 Q(price__lte=float(max_price)),
-                Q(
-                    store__supplier=AuthModels.Supplier.supplier.filter(
-                        clientprofile__business_name=supplier
-                    ).first()
-                ),
+                # Q(
+                #     store__supplier=AuthModels.Supplier.supplier.filter(
+                #         clientprofile__business_name=supplier
+                #     ).first()
+                # ),
             )
 
         elif max_price:
@@ -733,11 +733,11 @@ class SubCategoryDetailView(View):
                 Q(sub_category=subcategory),
                 Q(price__gte=float(min_price) if min_price else float(0)),
                 Q(price__lte=float(max_price)),
-                Q(
-                    store__supplier=AuthModels.Supplier.supplier.filter(
-                        clientprofile__business_name=supplier
-                    ).first()
-                ),
+                # Q(
+                #     store__supplier=AuthModels.Supplier.supplier.filter(
+                #         clientprofile__business_name=supplier
+                #     ).first()
+                # ),
             )
 
         elif max_price:
@@ -951,8 +951,8 @@ class StoreDetailView(DetailView):
             "context_name": "product-count",
             "results": store.store_product.count(),
         }
-        context["related_stores"] = {
-            "context_name": "related-stores",
+        context["stores"] = {
+            "context_name": "stores",
             "results": SupplierModels.Store.objects.filter(
                 Q(supplier=store.supplier), ~Q(id=store.id)
             ).order_by("-id")[:5],
