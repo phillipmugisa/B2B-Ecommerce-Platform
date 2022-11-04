@@ -17,12 +17,29 @@
     <style>
         /* CUSTOM CARD CSS */
         .service {
-            padding: 1.8em !important;
+            padding: 0 !important;
             border: 1px #f3f3f3 solid;
             border-radius: 12px !important;
         }
 
-        .service h2 {
+
+        .service-image {
+            background-image: url(../media/ServiceImage/images/represention-f7577bf1-b8bc-4b3c-a7d9-f64fcae5faee-4204f773-13df-41f_4FlpG0O.jpg_);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            block-size: 200px;
+            inline-size: 100%;
+            margin: 0;
+            position: relative;
+            border-top-left-radius: 12px !important;
+            border-top-right-radius: 12px !important;
+        }
+
+        .service-image h2 {
+            position: absolute;
+            top: 1.8rem;
+            left: 2rem;
             font-size: 18px !important;
             font-weight: 700;
             inline-size: fit-content;
@@ -33,11 +50,12 @@
             background-color: #fee9cc;
         }
 
-        .service hr {
-            display: none;
+        .service-content {
+            margin: 0 !important;
+            padding: 0 1.8em 1.8em 1.8em !important;
         }
 
-        .service p {
+        .service-content p {
             font-size: 18px;
             font-weight: 400;
             color: #5f6368;
@@ -47,14 +65,14 @@
             margin-block-start: .4em;
         }
 
-        .service a {
+        .service-content a {
             inline-size: fit-content;
             margin-top: auto;
             padding: 1.2em 0;
             color: hsl(38, 95%, 47%);
         }
 
-        .service a:hover {
+        .service-content a:hover {
             font-weight: 700;
         }
         /* CUSTOM CARD CSS */
@@ -455,69 +473,87 @@
                 </div>
                 <div class="section-body grid gap-6 grid-cols-1 md:grid-cols-2">
                     <div class="service grid gap-3 p-4 card-outlined rounded">
-                        <h2 class="text-lg font-semibold text-lghterBackgroundColor"><i class="ti-medall-alt"></i> Representation</h2>
-                        <hr>
-                        <div class="grid gap-2">
-                            <p class="text-base text-slate-700 font-normal">
-                                Selling brands in 77 countries. Hengniu is a group that develops, produces and sells two-wheel electric vehicles, three-wheel electric vehicles and high-end electric drive vehicles. 
-                                selling brands in 77 countries. Hengniu is a group that develops, produces and sells two-wheel electric vehicles, three-wheel electric vehicles and high-end electric drive vehicles. 
-                            </p>
-                            <a href="#">Read More</a>
+                        <div class="service-image">
+                            <h2 class="text-lg font-semibold text-lghterBackgroundColor"><i class="ti-medall-alt"></i> Representation</h2>
+                        </div>
+                        <div class="service-content">
+                            <div class="grid gap-2">
+                                <p class="text-base text-slate-700 font-normal">
+                                    Selling brands in 77 countries. Hengniu is a group that develops, produces and sells two-wheel electric vehicles, three-wheel electric vehicles and high-end electric drive vehicles. 
+                                    selling brands in 77 countries. Hengniu is a group that develops, produces and sells two-wheel electric vehicles, three-wheel electric vehicles and high-end electric drive vehicles. 
+                                </p>
+                                <a href="#">Read More</a>
+                            </div>
                         </div>
                     </div>
                     <div class="service grid gap-3 p-4 card-outlined rounded">
-                        <h2 class="text-lg font-semibold text-lghterBackgroundColor"><i class="ti-medall-alt"></i> Representation</h2>
-                        <hr>
-                        <div class="grid gap-2">
-                            <p class="text-base text-slate-700 font-normal">
-                                Selling brands in 77 countries. Hengniu is a group that develops, produces and sells two-wheel electric vehicles, three-wheel electric vehicles and high-end electric drive vehicles. 
-                                selling brands in 77 countries. Hengniu is a group that develops, produces and sells two-wheel electric vehicles, three-wheel electric vehicles and high-end electric drive vehicles. 
-                            </p>
-                            <a href="#">Read More</a>
+                        <div class="service-image">
+                            <h2 class="text-lg font-semibold text-lghterBackgroundColor"><i class="ti-medall-alt"></i> Representation</h2>
+                        </div>
+                        <div class="service-content">
+                            <div class="grid gap-2">
+                                <p class="text-base text-slate-700 font-normal">
+                                    Selling brands in 77 countries. Hengniu is a group that develops, produces and sells two-wheel electric vehicles, three-wheel electric vehicles and high-end electric drive vehicles. 
+                                    selling brands in 77 countries. Hengniu is a group that develops, produces and sells two-wheel electric vehicles, three-wheel electric vehicles and high-end electric drive vehicles. 
+                                </p>
+                                <a href="#">Read More</a>
+                            </div>
                         </div>
                     </div>
                     <div class="service grid gap-3 p-4 card-outlined rounded">
-                        <h2 class="text-lg font-semibold text-lghterBackgroundColor"><i class="ti-medall-alt"></i> Indigenous marketing</h2>
-                        <hr>
-                        <div class="grid gap-2">
-                            <p class="text-base text-slate-700 font-normal">
-                                Selling brands in 77 countries. Hengniu is a group that develops, produces and sells two-wheel electric vehicles, three-wheel electric vehicles and high-end electric drive vehicles. 
-                                selling brands in 77 countries. Hengniu is a group that develops, produces and sells two-wheel electric vehicles, three-wheel electric vehicles and high-end electric drive vehicles. 
-                            </p>
-                            <a href="#">Read More</a>
+                        <div class="service-image">
+                            <h2 class="text-lg font-semibold text-lghterBackgroundColor"><i class="ti-medall-alt"></i> Representation</h2>
+                        </div>
+                        <div class="service-content">
+                            <div class="grid gap-2">
+                                <p class="text-base text-slate-700 font-normal">
+                                    Selling brands in 77 countries. Hengniu is a group that develops, produces and sells two-wheel electric vehicles, three-wheel electric vehicles and high-end electric drive vehicles. 
+                                    selling brands in 77 countries. Hengniu is a group that develops, produces and sells two-wheel electric vehicles, three-wheel electric vehicles and high-end electric drive vehicles. 
+                                </p>
+                                <a href="#">Read More</a>
+                            </div>
                         </div>
                     </div>
                     <div class="service grid gap-3 p-4 card-outlined rounded">
-                        <h2 class="text-lg font-semibold text-lghterBackgroundColor"><i class="ti-medall-alt"></i> Showrooms</h2>
-                        <hr>
-                        <div class="grid gap-2">
-                            <p class="text-base text-slate-700 font-normal">
-                                Selling brands in 77 countries. Hengniu is a group that develops, produces and sells two-wheel electric vehicles, three-wheel electric vehicles and high-end electric drive vehicles. 
-                                selling brands in 77 countries. Hengniu is a group that develops, produces and sells two-wheel electric vehicles, three-wheel electric vehicles and high-end electric drive vehicles. 
-                            </p>
-                            <a href="#">Read More</a>
+                        <div class="service-image">
+                            <h2 class="text-lg font-semibold text-lghterBackgroundColor"><i class="ti-medall-alt"></i> Representation</h2>
+                        </div>
+                        <div class="service-content">
+                            <div class="grid gap-2">
+                                <p class="text-base text-slate-700 font-normal">
+                                    Selling brands in 77 countries. Hengniu is a group that develops, produces and sells two-wheel electric vehicles, three-wheel electric vehicles and high-end electric drive vehicles. 
+                                    selling brands in 77 countries. Hengniu is a group that develops, produces and sells two-wheel electric vehicles, three-wheel electric vehicles and high-end electric drive vehicles. 
+                                </p>
+                                <a href="#">Read More</a>
+                            </div>
                         </div>
                     </div>
                     <div class="service grid gap-3 p-4 card-outlined rounded">
-                        <h2 class="text-lg font-semibold text-lghterBackgroundColor"><i class="ti-medall-alt"></i> Stores</h2>
-                        <hr>
-                        <div class="grid gap-2">
-                            <p class="text-base text-slate-700 font-normal">
-                                Selling brands in 77 countries. Hengniu is a group that develops, produces and sells two-wheel electric vehicles, three-wheel electric vehicles and high-end electric drive vehicles. 
-                                selling brands in 77 countries. Hengniu is a group that develops, produces and sells two-wheel electric vehicles, three-wheel electric vehicles and high-end electric drive vehicles. 
-                            </p>
-                            <a href="#">Read More</a>
+                        <div class="service-image">
+                            <h2 class="text-lg font-semibold text-lghterBackgroundColor"><i class="ti-medall-alt"></i> Representation</h2>
+                        </div>
+                        <div class="service-content">
+                            <div class="grid gap-2">
+                                <p class="text-base text-slate-700 font-normal">
+                                    Selling brands in 77 countries. Hengniu is a group that develops, produces and sells two-wheel electric vehicles, three-wheel electric vehicles and high-end electric drive vehicles. 
+                                    selling brands in 77 countries. Hengniu is a group that develops, produces and sells two-wheel electric vehicles, three-wheel electric vehicles and high-end electric drive vehicles. 
+                                </p>
+                                <a href="#">Read More</a>
+                            </div>
                         </div>
                     </div>
                     <div class="service grid gap-3 p-4 card-outlined rounded">
-                        <h2 class="text-lg font-semibold text-lghterBackgroundColor"><i class="ti-medall-alt"></i> Products</h2>
-                        <hr>
-                        <div class="grid gap-2">
-                            <p class="text-base text-slate-700 font-normal">
-                                Selling brands in 77 countries. Hengniu is a group that develops, produces and sells two-wheel electric vehicles, three-wheel electric vehicles and high-end electric drive vehicles. 
-                                selling brands in 77 countries. Hengniu is a group that develops, produces and sells two-wheel electric vehicles, three-wheel electric vehicles and high-end electric drive vehicles. 
-                            </p>
-                            <a href="#">Read More</a>
+                        <div class="service-image">
+                            <h2 class="text-lg font-semibold text-lghterBackgroundColor"><i class="ti-medall-alt"></i> Representation</h2>
+                        </div>
+                        <div class="service-content">
+                            <div class="grid gap-2">
+                                <p class="text-base text-slate-700 font-normal">
+                                    Selling brands in 77 countries. Hengniu is a group that develops, produces and sells two-wheel electric vehicles, three-wheel electric vehicles and high-end electric drive vehicles. 
+                                    selling brands in 77 countries. Hengniu is a group that develops, produces and sells two-wheel electric vehicles, three-wheel electric vehicles and high-end electric drive vehicles. 
+                                </p>
+                                <a href="#">Read More</a>
+                            </div>
                         </div>
                     </div>
                 </div>
