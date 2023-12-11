@@ -9,6 +9,7 @@ apt-get install -y python3-pip python3-dev libpq-dev postgresql postgresql-contr
 
 # set up django project
 cd $PROJECT_DIR
+apt install python3.8-venv
 python3 -m venv $PROJECT_DIR/venv
 source $PROJECT_DIR/venv/bin/activate
 python -m pip install -r $PROJECT_DIR/requirements.txt
