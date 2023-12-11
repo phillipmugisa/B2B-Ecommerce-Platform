@@ -5,8 +5,7 @@ PROJECT_DIR=/home/$USER/B2B-Ecommerce-Platform
 apt-get update -y
 
 # install required software
-apt-get install nginx -x
-apt-get install python3-pip python3-dev libpq-dev postgresql postgresql-contrib nginx
+apt-get install -y python3-pip python3-dev libpq-dev postgresql postgresql-contrib nginx
 
 # set up django project
 cd $PROJECT_DIR
@@ -34,7 +33,10 @@ WantedBy=multi-user.target
 
 sudo systemctl start gunicorn
 sudo systemctl enable gunicorn
+sudo systemctl daemon-reload
 
+
+apt-get install nginx -y
 # write nginx conf file
 touch b2b
 echo "
