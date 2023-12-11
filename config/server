@@ -58,7 +58,7 @@ server{
     }
 }
 " > b2b
-mv b2b /etc/nginx/sites-available/b2b
+mv b2b /etc/nginx/sites-available/default
 
 sudo ln -s /etc/nginx/sites-available/b2b /etc/nginx/sites-enabled
 nginx -t
