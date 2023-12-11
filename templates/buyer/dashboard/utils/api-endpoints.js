@@ -13,6 +13,11 @@ const endpoints = {
     "get_all_notifications"     : "buyer/:id/notifications",                // GET
     "get_specific_notifications": "buyer/:id/notifications/:category",      // GET <all,contracts,others>
     "get_specific_notification" : "buyer/:id/notification/:id",             // GET
-    // "schedule_calendar_event"   : "buyer/:id/calendar/create",              // POST {buyer,title}
-    // "retrieve_calendar_events"  : "buyer/:id/calendar/events",              // GET
+    "schedule_calendar_event"   : "buyer/:id/calendar/create",              // POST {buyer,title}
+    "retrieve_calendar_events"  : "buyer/:id/calendar/events",              // GET
 }
+
+
+
+
+
