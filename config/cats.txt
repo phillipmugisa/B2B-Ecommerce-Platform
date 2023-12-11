@@ -337,3 +337,4 @@ python manage.py compilemessages -i "venv*"
 
 sudo systemctl daemon-reload
 sudo systemctl restart gunicorn
+sudo systemctl restart daphne
