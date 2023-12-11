@@ -13,7 +13,11 @@ apt install python3.8-venv
 python3 -m venv $PROJECT_DIR/venv
 source $PROJECT_DIR/venv/bin/activate
 python -m pip install -r $PROJECT_DIR/requirements.txt
-python -m pip install django gunicorn psycopg2
+
+apt-get install python3-dev libpq-dev
+python -m pip install psycopg2-binary
+python -m pip install --upgrade setuptools wheel
+python -m pip install django gunicorn
 
 # create gunicorn service
 touch /etc/systemd/system/gunicorn.service
