@@ -8,6 +8,11 @@ apt-get update -y
 apt-get install -y python3-pip python3-dev libpq-dev postgresql postgresql-contrib nginx
 
 # set up django project
+# Install pkg-config
+sudo apt-get install pkg-config
+# Install the development files for cairo
+sudo apt-get install libcairo2-dev
+
 cd $PROJECT_DIR
 apt install python3.8-venv
 python3 -m venv $PROJECT_DIR/venv
@@ -54,7 +59,7 @@ server{
 
     # server_name mugisa.tech
 
-    location = /favicon.ico { access_log off; log_not_found off; }
+    location = /favicon.ico { access_log off; log_clearnot_found off; }
     location /static/ {
         root $PROJECT_DIR;
     }
