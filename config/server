@@ -32,7 +32,7 @@ user=$1
 user=$USER
 Group=www-data
 WorkingDirectory=$PROJECT_DIR
-ExecStart=$PROJECT_DIR/venn/bin/gunicorn --access-logfile - --workers 3 --bind unix:$PROJECT_DIR/myproject.sock core.wsgi:application
+ExecStart=$PROJECT_DIR/venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:$PROJECT_DIR/myproject.sock core.wsgi:application
 
 
 user=$1
@@ -47,7 +47,6 @@ sudo systemctl daemon-reload
 
 apt-get install nginx -y
 # write nginx conf file
-touch b2b
 echo "
 server{
     listen 80 default_server;
@@ -68,7 +67,7 @@ server{
         proxy_pass http://unix:$PROJECT_DIR/myproject.sock;
     }
 }
-" > b2b
+" > default
 mv b2b /etc/nginx/sites-available/default
 
 sudo ln -s /etc/nginx/sites-available/b2b /etc/nginx/sites-enabled
