@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-PROJECT_DIR=/home/$USER/B2B-Ecommerce-Platform
+user=$1
+
+PROJECT_DIR=/home/$user/B2B-Ecommerce-Platform
 
 apt-get update -y
 
@@ -26,12 +28,16 @@ echo "
 Description=gunicorn daemon
 After=network.target
 
+
+user=$1
 [Service]
-User=$USER
+user=$user
 Group=www-data
 WorkingDirectory=$PROJECT_DIR
 ExecStart=$PROJECT_DIR/venn/bin/gunicorn --access-logfile - --workers 3 --bind unix:$PROJECT_DIR/myproject.sock core.wsgi:application
 
+
+user=$1
 [Install]
 WantedBy=multi-user.target
 " > /etc/systemd/system/gunicorn.service
