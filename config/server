@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-user=$1
-
-PROJECT_DIR=/home/$user/B2B-Ecommerce-Platform
+PROJECT_DIR=/home/B2B-Ecommerce-Platform
 
 apt-get update -y
 
@@ -31,7 +29,7 @@ After=network.target
 
 user=$1
 [Service]
-user=$user
+user=$USER
 Group=www-data
 WorkingDirectory=$PROJECT_DIR
 ExecStart=$PROJECT_DIR/venn/bin/gunicorn --access-logfile - --workers 3 --bind unix:$PROJECT_DIR/myproject.sock core.wsgi:application
