@@ -89,7 +89,7 @@
                 if (window.location.hostname === 'localhost') {
                     endpoint = 'http://localhost:8000/en/api/notifications/';
                 } else {
-                    endpoint = 'https://foroden.com/en/api/notifications/';
+                    endpoint = 'http://mugisa.tech/en/api/notifications/';
                 }
 
                 const response = await fetch(endpoint);
@@ -135,7 +135,7 @@
                 if (window.location.hostname === 'localhost') {
                     endpoint = `http://localhost:8000/en/api/notifications/${category}`;
                 } else {
-                    endpoint = `https://foroden.com/en/api/notifications/${category}`;
+                    endpoint = `http://mugisa.tech/en/api/notifications/${category}`;
                 }
 
                 const response = await fetch(endpoint);

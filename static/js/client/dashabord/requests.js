@@ -26,7 +26,7 @@ async function makeRequest (url, method, data={}, dataType=null, access_token=nu
         BASE_API_URL = 'http://localhost:8000/en';
     }
     else {
-        BASE_API_URL = 'https://foroden.com/en';
+        BASE_API_URL = 'http://mugisa.tech/en';
     }
 
     let requestData = {

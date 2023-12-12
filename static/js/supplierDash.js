@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
         BASE_URL = 'http://localhost:8000';
     }
     else {
-        BASE_API_URL = 'https://foroden.com';
-        BASE_URL = 'https://foroden.com';
+        BASE_API_URL = 'http://mugisa.tech';
+        BASE_URL = 'http://mugisa.tech';
     }
 
     const fetchData = async (url, has_page_num = true) => {

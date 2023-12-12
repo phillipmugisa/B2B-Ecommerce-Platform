@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
         BASE_URL = 'http://localhost:8000';
     }
     else {
-        BASE_API_URL = 'https://foroden.com/en/admin-api';
-        BASE_URL = 'https://foroden.com/';
+        BASE_API_URL = 'http://mugisa.tech/en/admin-api';
+        BASE_URL = 'http://mugisa.tech/';
     }
 
     function getCookie(name) {

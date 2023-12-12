@@ -23,7 +23,7 @@ ALTER DATABASE tradeoasis OWNER TO tradeoasis;
 
 ./venv/lib/python3.8/site-packages/allauth/socialaccount/views.py
 
-from auth_app.forms import CustomSignupForm
+from auth_app import forms
 
 class SignupView(
     RedirectAuthenticatedUserMixin,
@@ -31,7 +31,7 @@ class SignupView(
     AjaxCapableProcessFormViewMixin,
     FormView,
 ):
-    form_class = CustomSignupForm
+    form_class = forms.CustomSignupForm
 
 
 python manage.py makemessages --all -i "venv*"
