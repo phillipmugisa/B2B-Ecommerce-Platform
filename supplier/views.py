@@ -1871,9 +1871,9 @@ class DashboardStoresCreateView(SupplierOnlyAccessMixin, View):
             SupplierTask.make_supplier_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
 
             return redirect(reverse("supplier:dashboard-storescreate"))
-        except:
+        except Exception as err:
             messages.add_message(
-                request, messages.ERROR, _("Sorry, an error occurred. Please Try Again")
+                request, messages.ERROR, _("Sorry, an error occurred. Please Try Again", err)
             )
             return redirect(reverse("supplier:dashboard-storescreate"))
 
