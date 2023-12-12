@@ -299,10 +299,10 @@ Pending Tasks
  - add (category, subcategory and location) product features
 
 
-python manage.py dumpdata --exclude auth.permission --exclude contenttypes --exclude _django_curs_140299234242688_sync_43 > db.json
-python manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json
-python -Xutf8 manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json
-python -Xutf8 manage.py loaddata db.json
+python manage.py dumpdata --exclude auth.permission --exclude contenttypes --exclude _django_curs_140299234242688_sync_43 > ./config/db.json
+python manage.py dumpdata --exclude auth.permission --exclude contenttypes > ./config/db.json
+python -Xutf8 manage.py dumpdata --exclude auth.permission --exclude contenttypes > ./config/db.json
+python -Xutf8 manage.py loaddata ./config/db.json
 python manage.py translate_db
 
 

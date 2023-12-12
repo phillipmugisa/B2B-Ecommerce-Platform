@@ -3,7 +3,8 @@ from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 from django.utils.text import slugify
 from django.dispatch import receiver
-from django.db.models.signals import post_save
+from django.db.models.signals import post_delete
+from django.dispatch import receiver
 from django.conf import settings
 from django.db.models import Q
 
@@ -24,10 +25,11 @@ def get_chat_file_path(instance, chat_filename_key):
     path = os.path.join(f"{settings.CHATROOMFILES_DIRS.get(chat_filename_key)}/{filename}{ext}")
     return path
 
-# chats and chatrooms
+# # chats and chatrooms
 class Chat(models.Model):
     class Meta:
         ordering = ["-updated_on"]
+        abstract = True
 
     roomname = models.CharField(_("Chatroom Name"), max_length=256, unique=True, null=True, blank=True)
     chatfilepath = models.CharField(
@@ -141,3 +143,14 @@ class OrderChat(Chat):
         if not self.roomname:
             self.roomname = self.order.order_id
         super().save(*args, **kwargs)
+
+
+@receiver(post_delete, sender=Chat)
+def delete_chat_file(sender, instance, **kwargs):
+    try:
+        os.remove(instance.chatfilepath)
+        print(f"File at '{instance.chatfilepath}' deleted successfully.")
+    except FileNotFoundError:
+        print(f"File not found at '{instance.chatfilepath}'.")
+    except Exception as e:
+        print(f"Error deleting file at '{instance.chatfilepath}': {e}")

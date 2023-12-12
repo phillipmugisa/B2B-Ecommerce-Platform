@@ -17,7 +17,7 @@ six
 stripe
 webdriver_manager
 xhtml2pdf
-psycopg2
+psycopg2-binary
 pyyaml
 paypalrestsdk
 daphne
