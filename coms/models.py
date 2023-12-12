@@ -31,6 +31,7 @@ class Chat(models.Model):
         ordering = ["-updated_on"]
         abstract = True
 
+    id = models.AutoField(primary_key=True)
     roomname = models.CharField(_("Chatroom Name"), max_length=256, unique=True, null=True, blank=True)
     chatfilepath = models.CharField(
         _("Chat filepath"),
