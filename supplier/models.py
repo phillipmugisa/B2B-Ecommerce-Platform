@@ -70,7 +70,7 @@ class Store(models.Model):
         upload_to=get_file_path,
         default="test/django.png",
     )
-    is_verified = models.BooleanField(_("Verified by Admin"), default=False)
+    is_verified = models.BooleanField(_("Verified by Admin"), default=True)
     created_on = models.DateField(_("Created on"), default=timezone.now)
 
     def save(self, *args, **kwargs):
@@ -165,7 +165,7 @@ class Product(models.Model):
     price = models.DecimalField(_("Price"), decimal_places=2, max_digits=12, blank=True, null=True)
     discount = models.DecimalField(_("Discount as a Percentage"), decimal_places=2, max_digits=3, blank=True, null=True)
     stock = models.IntegerField(_("stock"), blank=True, null=True)
-    is_verified = models.BooleanField(_("Verified by Admin"), default=False)
+    is_verified = models.BooleanField(_("Verified by Admin"), default=True)
     created_on = models.DateField(_("Created on"), default=timezone.now)
 
     def save(self, *args, **kwargs):
@@ -316,7 +316,7 @@ class Order(models.Model):
     agreed_price = models.DecimalField(_("Agreed Price"), decimal_places=2, max_digits=12, blank=True, null=True)
     paid_price = models.DecimalField(_("Paid Price"), decimal_places=2, max_digits=12, blank=True, null=True)
     discount = models.DecimalField(_("Discount as a Percentage"), decimal_places=2, max_digits=3, blank=True, null=True, default=0.00)
-    is_complete = models.BooleanField(_("Completed"), default=False)
+    is_complete = models.BooleanField(_("Completed"), default=True)
     accepted_on = models.DateField(_("Accepted on"), blank=True, null=True)
     delivery_date = models.DateField(_("Delivery Date"), blank=True, null=True) 
     created_on = models.DateField(_("Created on"), default=timezone.now)
