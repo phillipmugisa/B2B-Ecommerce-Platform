@@ -21,7 +21,7 @@ GRANT ALL PRIVILEGES ON DATABASE tradeoasis TO tradeoasis;
 ALTER DATABASE tradeoasis OWNER TO tradeoasis;
 
 
-IN venv\Lib\site-packages\allauth\socialaccount\views.py
+./venv/lib/python3.8/site-packages/allauth/socialaccount/views.py
 
 from auth_app.forms import CustomSignupForm
 

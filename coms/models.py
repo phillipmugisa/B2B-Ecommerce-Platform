@@ -25,13 +25,12 @@ def get_chat_file_path(instance, chat_filename_key):
     path = os.path.join(f"{settings.CHATROOMFILES_DIRS.get(chat_filename_key)}/{filename}{ext}")
     return path
 
-# # chats and chatrooms
-class Chat(models.Model):
-    class Meta:
-        ordering = ["-updated_on"]
-        abstract = True
+class SupportClientChat(models.Model):
+    '''
+        Support -Client(Buyer/Supplier Chatroom)
+    '''
 
-    id = models.AutoField(primary_key=True)
+    chat_filename_key = "support-client"
     roomname = models.CharField(_("Chatroom Name"), max_length=256, unique=True, null=True, blank=True)
     chatfilepath = models.CharField(
         _("Chat filepath"),
@@ -45,6 +44,18 @@ class Chat(models.Model):
     created_on = models.DateField(_("Created on"), default=timezone.now)
     updated_on = models.DateTimeField(_("Updated on"), null=True, blank=True)
 
+    user = models.ForeignKey(
+        Authmodels.User,
+        on_delete=models.CASCADE,
+    )
+    support = models.ForeignKey(
+        Authmodels.SupportProfile,
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True,
+    )
+
+    
     def save(self, *args, **kwargs):
         self.chatfilepath = get_chat_file_path(self, self.chat_filename_key)
         self.updated_on = datetime.datetime.now()
@@ -57,32 +68,25 @@ class Chat(models.Model):
 
         super().save(*args, **kwargs)
 
-
-class SupportClientChat(Chat):
-    '''
-        Support -Client(Buyer/Supplier Chatroom)
-    '''
-
-    chat_filename_key = "support-client"
-
-    user = models.ForeignKey(
-        Authmodels.User,
-        on_delete=models.CASCADE,
-    )
-    support = models.ForeignKey(
-        Authmodels.SupportProfile,
-        on_delete=models.CASCADE,
-        blank=True,
-        null=True,
-    )
-
 # order chat in supplier models
-class InterClientChat(Chat):
+class InterClientChat(models.Model):
     '''
         Client Chatroom
         max users: 2
     '''
     chat_filename_key = "interclient"
+    roomname = models.CharField(_("Chatroom Name"), max_length=256, unique=True, null=True, blank=True)
+    chatfilepath = models.CharField(
+        _("Chat filepath"),
+        max_length=256,
+        blank=True,
+        null=True,
+        unique=True
+    )
+    is_closed = models.BooleanField(_("Chat Closed"), default=False)
+    is_handled = models.BooleanField(_("Chat handled"), default=False)
+    created_on = models.DateField(_("Created on"), default=timezone.now)
+    updated_on = models.DateTimeField(_("Updated on"), null=True, blank=True)
     initiator = models.ForeignKey(
         Authmodels.ClientProfile,
         on_delete=models.CASCADE,
@@ -93,21 +97,70 @@ class InterClientChat(Chat):
         on_delete=models.CASCADE,
         related_name="participant"
     )
+    
+    def save(self, *args, **kwargs):
+        self.chatfilepath = get_chat_file_path(self, self.chat_filename_key)
+        self.updated_on = datetime.datetime.now()
+            
+        # try:
+        #     with open(f"{self.chatfilepath}", "w") as file:
+        #         json.dump([], file)
+        # except FileNotFoundError:
+        #     self.chatfilepath = None
 
-class InterUserChat(Chat):
+        super().save(*args, **kwargs)
+
+class InterUserChat(models.Model):
     '''
         Client Chatroom
         max users: 2
     '''
     chat_filename_key = "interuser"
+    roomname = models.CharField(_("Chatroom Name"), max_length=256, unique=True, null=True, blank=True)
+    chatfilepath = models.CharField(
+        _("Chat filepath"),
+        max_length=256,
+        blank=True,
+        null=True,
+        unique=True
+    )
+    is_closed = models.BooleanField(_("Chat Closed"), default=False)
+    is_handled = models.BooleanField(_("Chat handled"), default=False)
+    created_on = models.DateField(_("Created on"), default=timezone.now)
+    updated_on = models.DateTimeField(_("Updated on"), null=True, blank=True)
     participants = models.ManyToManyField(to=Authmodels.User, related_name="chat_participants", blank=True)
 
-class GroupChat(Chat):
+    
+    def save(self, *args, **kwargs):
+        self.chatfilepath = get_chat_file_path(self, self.chat_filename_key)
+        self.updated_on = datetime.datetime.now()
+            
+        # try:
+        #     with open(f"{self.chatfilepath}", "w") as file:
+        #         json.dump([], file)
+        # except FileNotFoundError:
+        #     self.chatfilepath = None
+
+        super().save(*args, **kwargs)
+
+class GroupChat(models.Model):
     '''
         Client Chatroom
         max users: 2
     '''
     chat_filename_key = "groupchat"
+    roomname = models.CharField(_("Chatroom Name"), max_length=256, unique=True, null=True, blank=True)
+    chatfilepath = models.CharField(
+        _("Chat filepath"),
+        max_length=256,
+        blank=True,
+        null=True,
+        unique=True
+    )
+    is_closed = models.BooleanField(_("Chat Closed"), default=False)
+    is_handled = models.BooleanField(_("Chat handled"), default=False)
+    created_on = models.DateField(_("Created on"), default=timezone.now)
+    updated_on = models.DateTimeField(_("Updated on"), null=True, blank=True)
     name = models.CharField(_("Chatroom Name"), max_length=256, null=True, blank=True)
     image = models.ImageField(
         verbose_name=_("Image"),
@@ -118,11 +171,36 @@ class GroupChat(Chat):
     )
     participants = models.ManyToManyField(to=Authmodels.User, related_name="group_participants", blank=True)
 
-class OrderChat(Chat):
+    
+    def save(self, *args, **kwargs):
+        self.chatfilepath = get_chat_file_path(self, self.chat_filename_key)
+        self.updated_on = datetime.datetime.now()
+            
+        # try:
+        #     with open(f"{self.chatfilepath}", "w") as file:
+        #         json.dump([], file)
+        # except FileNotFoundError:
+        #     self.chatfilepath = None
+
+        super().save(*args, **kwargs)
+
+class OrderChat(models.Model):
     '''
         Order Chatroom
     '''
     chat_filename_key = "orders"
+    roomname = models.CharField(_("Chatroom Name"), max_length=256, unique=True, null=True, blank=True)
+    chatfilepath = models.CharField(
+        _("Chat filepath"),
+        max_length=256,
+        blank=True,
+        null=True,
+        unique=True
+    )
+    is_closed = models.BooleanField(_("Chat Closed"), default=False)
+    is_handled = models.BooleanField(_("Chat handled"), default=False)
+    created_on = models.DateField(_("Created on"), default=timezone.now)
+    updated_on = models.DateTimeField(_("Updated on"), null=True, blank=True)
     order = models.OneToOneField(to=SupplierModels.Order, on_delete=models.CASCADE)
     
     buyer_representative = models.ForeignKey(
@@ -140,18 +218,18 @@ class OrderChat(Chat):
         null=True,
     )
 
+    
     def save(self, *args, **kwargs):
         if not self.roomname:
             self.roomname = self.order.order_id
+
+        self.chatfilepath = get_chat_file_path(self, self.chat_filename_key)
+        self.updated_on = datetime.datetime.now()
+            
+        # try:
+        #     with open(f"{self.chatfilepath}", "w") as file:
+        #         json.dump([], file)
+        # except FileNotFoundError:
+        #     self.chatfilepath = None
+
         super().save(*args, **kwargs)
-
-
-@receiver(post_delete, sender=Chat)
-def delete_chat_file(sender, instance, **kwargs):
-    try:
-        os.remove(instance.chatfilepath)
-        print(f"File at '{instance.chatfilepath}' deleted successfully.")
-    except FileNotFoundError:
-        print(f"File not found at '{instance.chatfilepath}'.")
-    except Exception as e:
-        print(f"Error deleting file at '{instance.chatfilepath}': {e}")

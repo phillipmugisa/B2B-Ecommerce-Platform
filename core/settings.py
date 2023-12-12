@@ -297,6 +297,9 @@ BRAINTREE_PUBLIC_KEY = os.environ.get("BRAINTREE_PUBLIC_KEY")
 BRAINTREE_PRIVATE_KEY = os.environ.get("BRAINTREE_PRIVATE_KEY")
 
 SOCIALACCOUNT_SIGNUP_FORM_CLASS = 'auth_app.forms.CustomSocialSignupForm'
+ACCOUNT_FORMS = {
+    'signup': 'auth_app.forms.CustomSocialSignupForm',
+}
 
 ACCOUNT_EMAIL_REQUIRED = True
 SOCIALACCOUNT_AUTO_SIGNUP = False
