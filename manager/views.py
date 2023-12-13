@@ -425,7 +425,7 @@ class SupportCreateDiscussionView(AuthedOnlyAccessMixin, View):
         instance = discussion
         modal = ManagerModels.Discussion
 
-        ManagerTasks.make_manager_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
+        # ManagerTasks.make_manager_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
 
         messages.add_message(
             request, messages.SUCCESS, _("Discussion created successfully.")
@@ -467,7 +467,7 @@ class SupportDiscussionView(View):
         instance = discussion_reply
         modal = ManagerModels.DiscussionReply
 
-        ManagerTasks.make_manager_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
+        # ManagerTasks.make_manager_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
 
         messages.add_message(
             request, messages.SUCCESS, _("Reply submitted successfully.")

@@ -255,7 +255,7 @@ class ServiceCreateView(SupportOnlyAccessMixin, CreateView):
         fields = ("name", "description")
         instance = service
 
-        ManagerTask.make_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
+        # ManagerTask.make_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
 
         messages.add_message(
             request, messages.SUCCESS, _(f"Service ({name}) created successfully.")
@@ -288,7 +288,7 @@ class ShowroomCreateView(SupportOnlyAccessMixin, CreateView):
         fields = ("name",)
         instance = showroom
 
-        ManagerTask.make_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
+        # ManagerTask.make_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
 
         if not showroom:
             messages.add_message(
@@ -338,7 +338,7 @@ class CategoryCreateView(SupportOnlyAccessMixin, View):
         fields = ("name",)
         instance = category
         
-        ManagerTask.make_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
+        # ManagerTask.make_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
 
         # create sub categories if any
         sub_category_len = len(request.FILES) - 1
@@ -363,7 +363,7 @@ class CategoryCreateView(SupportOnlyAccessMixin, View):
             fields = ("name",)
             instance = sub_categgory
             
-            ManagerTask.make_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
+            # ManagerTask.make_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
 
 
         messages.add_message(
@@ -417,7 +417,7 @@ class SubCategoryCreateView(SupportOnlyAccessMixin, View):
             fields = ("name",)
             instance = sub_categgory
 
-            ManagerTask.make_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
+            # ManagerTask.make_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
 
         messages.add_message(
             request,
@@ -538,7 +538,7 @@ class AdminCommunityChatView(SupportOnlyAccessMixin, View):
         fields = ("description",)
         instance = discussion_reply
 
-        ManagerTask.make_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
+        # ManagerTask.make_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
 
         return redirect(
             reverse("app_admin:community-chat", kwargs={"slug": discussion.slug})
@@ -786,7 +786,7 @@ class AdminPromotionsCreateView(View):
         fields = ("name", "description",)
         instance = promotion
 
-        ManagerTask.make_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
+        # ManagerTask.make_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
 
         messages.add_message(request, messages.SUCCESS, _("Promotion Created Successfully."))
         return redirect(reverse("app_admin:promotions"))
@@ -851,7 +851,7 @@ class AdminPromotionsEditView(View):
         
         instance = promotion
 
-        ManagerTask.make_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
+        # ManagerTask.make_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
 
         messages.add_message(request, messages.SUCCESS, _("Promotion Edited Successfully."))
         return redirect(reverse("app_admin:promotions"))
@@ -922,7 +922,7 @@ class AdminEmailPromotionsCreateView(View):
         fields = ("subject", "description",)
         instance = promotion
 
-        ManagerTask.make_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
+        # ManagerTask.make_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
 
         messages.add_message(request, messages.SUCCESS, _("Promotion Created Successfully."))
         return redirect(reverse("app_admin:email-promotions"))
@@ -986,7 +986,7 @@ class AdminEmailPromotionsEditView(View):
         fields = ("subject", "description",)
         instance = promotion
 
-        ManagerTask.make_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
+        # ManagerTask.make_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
 
         messages.add_message(request, messages.SUCCESS, _("Promotion Edited Successfully."))
         return redirect(reverse("app_admin:email-promotions"))

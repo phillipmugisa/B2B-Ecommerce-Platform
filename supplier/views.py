@@ -1329,7 +1329,7 @@ class DashboardProductsCreateView(SupplierOnlyAccessMixin, View):
                 instance = product
                 modal = SupplierModels.Product
                 
-                SupplierTask.make_supplier_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
+                # SupplierTask.make_supplier_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
 
             messages.add_message(
                 request, messages.SUCCESS, _("Product created successfully.")
@@ -2061,7 +2061,7 @@ class DashboardServicesCreateView(SupplierOnlyAccessMixin, View):
 
             fields = ("name", "description", "price", "currency")
             instance = service
-            SupplierTask.make_supplier_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
+            # SupplierTask.make_supplier_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
 
             # add tags
             for i in range(1, 6):
@@ -2074,7 +2074,7 @@ class DashboardServicesCreateView(SupplierOnlyAccessMixin, View):
                 )
                 fields = ("name",)
                 instance = tag
-                SupplierTask.make_supplier_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
+                # SupplierTask.make_supplier_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
 
 
             messages.add_message(
