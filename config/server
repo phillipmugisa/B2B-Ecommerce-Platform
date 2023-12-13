@@ -41,6 +41,7 @@ apt-get install python3-dev libpq-dev
 python -m pip install psycopg2-binary
 python -m pip install --upgrade setuptools wheel
 python -m pip install django gunicorn
+python -m pip install -U 'Twisted[tls,http2]'
 
 # create gunicorn service
 touch /etc/systemd/system/gunicorn.service
@@ -70,7 +71,7 @@ After=network.target
 User=root
 Group=www-data
 WorkingDirectory=$PROJECT_DIR
-ExecStart=$PROJECT_DIR/venv/bin/daphne --bind unix:$PROJECT_DIR/daphne.sock core.asgi:application
+ExecStart=$PROJECT_DIR/venv/bin/daphne -p 9001 core.asgi:application
 
 [Install]
 WantedBy=multi-user.target
@@ -84,6 +85,10 @@ sudo systemctl daemon-reload
 apt-get install nginx -y
 # write nginx conf file
 echo "
+upstream channels-backend {
+        server localhost:9001;
+}
+
 server{
     listen 80 default_server;
     listen [::]:80 default_server;
@@ -101,6 +106,18 @@ server{
     location / {
         include proxy_params;
         proxy_pass http://unix:$PROJECT_DIR/myproject.sock;
+    }
+
+    location /ws/ {
+        proxy_pass http://channels-backend;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Host $server_name;
     }
 }
 " > default

@@ -1868,7 +1868,7 @@ class DashboardStoresCreateView(SupplierOnlyAccessMixin, View):
             instance = store
             modal = SupplierModels.Store
             
-            SupplierTask.make_supplier_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
+            # SupplierTask.make_supplier_model_translations.delay(fields, instance.pk, instance.__class__.__name__)
 
             return redirect(reverse("supplier:dashboard-storescreate"))
         except Exception as err:
