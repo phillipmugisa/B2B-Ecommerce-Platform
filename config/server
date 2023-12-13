@@ -49,19 +49,32 @@ echo "
 Description=gunicorn daemon
 After=network.target
 
-
-user=$1
 [Service]
 user=$USER
 Group=www-data
 WorkingDirectory=$PROJECT_DIR
 ExecStart=$PROJECT_DIR/venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:$PROJECT_DIR/myproject.sock core.wsgi:application
 
-
-user=$1
 [Install]
 WantedBy=multi-user.target
 " > /etc/systemd/system/gunicorn.service
+
+# create daphne service
+touch /etc/systemd/system/daphne.service
+echo "
+[Unit]
+Description=daphne daemon
+After=network.target
+
+[Service]
+User=root
+Group=www-data
+WorkingDirectory=$PROJECT_DIR
+ExecStart=$PROJECT_DIR/venv/bin/daphne --bind unix:$PROJECT_DIR/daphne.sock core.asgi:application
+
+[Install]
+WantedBy=multi-user.target
+" > /etc/systemd/system/daphne.service
 
 sudo systemctl start gunicorn
 sudo systemctl enable gunicorn
