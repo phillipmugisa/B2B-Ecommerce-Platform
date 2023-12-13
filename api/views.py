@@ -99,8 +99,7 @@ class ProductCreateApiView(generics.CreateAPIView):
         serializer.is_valid(raise_exception=True)
         self.perform_create(serializer)
         headers = self.get_success_headers(serializer.data)
-
-        product = SupplierModels.Product.admin_list.filter(pk = serializer.data.pk).first
+        product = SupplierModels.Product.admin_list.filter(id = serializer.data.get("id"))
         product.first().business = AuthModels.ClientProfile.objects.filter(user=request.user).first()
         product.first().save()
 
@@ -322,9 +321,9 @@ class CartAppeendAppendView(generics.CreateAPIView):
         variation = SupplierModels.OrderProductVariation(
             cart = cart,
             product = product,
-            price = SupplierModels.ProductPrice.objects.filter(pk=request.data.get("pricing")).first(),
-            color = SupplierModels.ProductColor.objects.filter(pk=request.data.get("color")).first(),
-            material = SupplierModels.ProductMaterial.objects.filter(pk=request.data.get("material")).first(),
+            price = SupplierModels.ProductPrice.objects.filter(id=request.data.get("pricing")).first(),
+            color = SupplierModels.ProductColor.objects.filter(id=request.data.get("color")).first(),
+            material = SupplierModels.ProductMaterial.objects.filter(id=request.data.get("material")).first(),
             quantity = int(request.data.get("quantity")),
         )
         variation.save()

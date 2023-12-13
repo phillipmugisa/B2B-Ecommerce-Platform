@@ -22,10 +22,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-    <script src="{% static 'js/tinymce/js/tinymce/tinymce.min.js' %}"></script>
-    <script src="{% static 'js/client/dashabord/requests.js' %}"></script>
+    <script src="{% static 'js/client/dashboard/requests.js' %}"></script>
 
     <title>Golden - {% trans 'Supplier Dashboard' %}</title>
 </head>
@@ -50,13 +47,13 @@
                             <li class="link active">
                                 <a href="{% url 'supplier:dashboard' %}">
                                     <span><i class="fa fa-home"></i></span>
-                                    <span class="text toggle-able">{%  trans 'Dashboard' %}</span>
+                                    <span class="text toggle-able block">{%  trans 'Dashboard' %}</span>
                                 </a>
                             </li>
                             <li class="link">
                                 <a href="{% url 'supplier:dashboard-stores' %}">
                                     <span><i class="fa fa-shopping-cart"></i></span>
-                                    <span class="text toggle-able">{%  trans 'Stores' %}</span>
+                                    <span class="text toggle-able block">{%  trans 'Stores' %}</span>
                                 </a>
                                 <!-- <ul class="sub-menu">
                                     <li class="link"><a href="{% url 'supplier:dashboard-storescreate' %}"> {%  trans 'Create store' %}</a></li>
@@ -66,7 +63,7 @@
                             <li class="link">
                                 <a href="{% url 'supplier:dashboard-products' %}">
                                     <span><i class="fa fa-briefcase"></i></span>
-                                    <span class="text toggle-able">{%  trans 'Products' %}</span>
+                                    <span class="text toggle-able block">{%  trans 'Products' %}</span>
                                 </a>
                                 <!-- <ul class="sub-menu">
                                     <li class="link"><a href="{% url 'supplier:dashboard-productscreate' %}"> {%  trans 'Create products' %}</a></li>
@@ -76,7 +73,7 @@
                             <li class="link">
                                 <a href="{% url 'supplier:dashboard-services' %}">
                                     <span><i class="fa fa-briefcase"></i></span>
-                                    <span class="text toggle-able">{%  trans 'Services' %}</span>
+                                    <span class="text toggle-able block">{%  trans 'Services' %}</span>
                                     <!-- <i class="ti-angle-down"></i> -->
                                 </a>
                                 <!-- <ul class="sub-menu">
@@ -89,7 +86,7 @@
                                 <a href="{% url 'supplier:dashboard-contracts' %}">
                                     <span><i class="fa fa-gavel"></i></span>
                                     <span
-                                        class="text toggle-able">{%  trans 'Contracts' %}
+                                        class="text toggle-able block">{%  trans 'Contracts' %}
                                     </span>
                                 </a>
                             </li>
@@ -98,7 +95,7 @@
                                 <a href="{% url 'supplier:dashboard-order-list' %}">
                                     <span><i class="fa fa-gavel"></i></span>
                                     <span
-                                        class="text toggle-able">{%  trans 'Orders' %}
+                                        class="text toggle-able block">{%  trans 'Orders' %}
                                     </span>
                                 </a>
                             </li>
@@ -106,7 +103,7 @@
                                 <a href="{% url 'supplier:dashboard-payments' %}">
                                     <span><i class="fa fa-credit-card"></i></span>
                                         <span
-                                            class="text toggle-able">{%  trans 'Payments' %}
+                                            class="text toggle-able block">{%  trans 'Payments' %}
                                         </span>
                                 </a>
                             </li>
@@ -114,7 +111,7 @@
                                 <a href="{% url 'supplier:dashboard-advertise' %}">
                                     <span><i class="fa fa-bullhorn"></i></span>
                                     <span
-                                        class="text toggle-able">{%  trans 'Advertise' %}
+                                        class="text toggle-able block">{%  trans 'Advertise' %}
                                     </span>
                                 </a>
                             </li>
@@ -122,7 +119,7 @@
                                 <a href="{% url 'supplier:dashboard-calendar' %}">
                                     <span><i class="fa fa-calendar"></i></span>
                                     <span
-                                        class="text toggle-able">{%  trans 'Calendar' %}
+                                        class="text toggle-able block">{%  trans 'Calendar' %}
                                     </span>
                                 </a>
                             </li>
@@ -130,7 +127,7 @@
                                 <a href="{% url 'supplier:dashboard-messenger' %}">
                                     <span><i class="fa fa-comment"></i></span>
                                     <span
-                                        class="text toggle-able">{%  trans 'Chat & Messenger' %}
+                                        class="text toggle-able block">{%  trans 'Messenger' %}
                                     </span>
                                 </a>
                             </li>
@@ -138,7 +135,7 @@
                                 <a href="{% url 'supplier:dashboard-notification' %}">
                                     <span><i class="fa fa-bell"></i></span>
                                     <span
-                                        class="text toggle-able">{%  trans 'Push Notifications' %}
+                                        class="text toggle-able block">{%  trans 'Notifications' %}
                                     </span>
                                 </a>
                             </li>
@@ -451,9 +448,8 @@
     </script>    
 
     <!-- <script src="{% static 'js/client/dashboard/sidebar.js' %}"></script> -->
-    <script src="{% static 'js/client/dashabord/utils.js' %}"></script>
+    <script src="{% static 'js/client/dashboard/utils.js' %}"></script>
     <script src="{% static 'js/supplierDash.js' %}"></script>
-    <script src="{% static 'js/supplier_forms.js' %}"></script>
 
 </body>
 

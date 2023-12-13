@@ -1873,7 +1873,7 @@ class DashboardStoresCreateView(SupplierOnlyAccessMixin, View):
             return redirect(reverse("supplier:dashboard-storescreate"))
         except Exception as err:
             messages.add_message(
-                request, messages.ERROR, _("Sorry, an error occurred. Please Try Again", err)
+                request, messages.ERROR, _("Sorry, an error occurred. Please Try Again")
             )
             return redirect(reverse("supplier:dashboard-storescreate"))
 
@@ -2084,7 +2084,7 @@ class DashboardServicesCreateView(SupplierOnlyAccessMixin, View):
             return redirect(reverse("supplier:dashboard-servicescreate"))
         except:
             messages.add_message(
-                request, messages.ERROR, _("Sorry, an error occurred. Please Try Again")
+                request, messages.ERROR, _("Sorry, an error occurred. Please Try Again", err)
             )
             return redirect(reverse("supplier:dashboard-servicescreate"))
 

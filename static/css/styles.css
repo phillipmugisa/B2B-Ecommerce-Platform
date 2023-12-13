@@ -169,7 +169,7 @@
 }
 
 .main-content.split {
-    grid-template-columns: 3fr 1.5fr;
+    grid-template-columns: 3fr 1.8fr;
 }
 
 .app-content.expanded .main-content.split {
@@ -1599,10 +1599,10 @@ tr {
 
 @keyframes error {
     0% {
-        border: 3px solid transparent;
+        border: 1px solid transparent;
     }
     100% {
-        border: 3px solid red;
+        border: 1px solid red;
     }
 }
 

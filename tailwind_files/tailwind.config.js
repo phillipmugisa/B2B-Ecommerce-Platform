@@ -25,7 +25,7 @@ module.exports = {
             lighterBackgroundColorHover: 'hsl(213, 28%, 14%)',
         },
         width: {
-            'full': '95%',
+            'full': '100vh',
         },
         gridTemplateRows: {
             'auto-2': 'repeat(min-content, 2)',

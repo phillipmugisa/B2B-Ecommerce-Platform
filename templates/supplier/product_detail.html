@@ -66,7 +66,7 @@
                         <div class="grid md:gap-1 py-2 justify-items-start" style="border-bottom: 1px solid hsla(213, 28%, 19%, .1);border-top: 1px solid hsla(213, 28%, 19%, .1)">
                             <p class="text-base font-normal text-slate-800">{{object.description}}</p>
                         </div>
-                        <div class="cta grid justify-start gap-3">
+                        <div class="cta grid md:grid-cols-2 justify-start gap-3">
                             <a href="{% url 'supplier:supplier-detail' product_supplier.results.profile.slug %}" class="grid grid-flow-col place-items-center gap-3 px-3 md:px-5 py-2 text-base md:py-2 bg-yellowColor hover:bg-yellowColorHover duration-200 transition-all ease-in rounded-full text-white font-semibold">
                                 <span class="text-white"><i class="fa fa-address-book"></i></span>
                                 <span>{% trans 'Contact Supplier' %}</span>

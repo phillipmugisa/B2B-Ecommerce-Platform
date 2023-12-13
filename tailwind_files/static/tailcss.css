@@ -693,7 +693,11 @@ video {
 }
 
 .w-full {
-  width: 95%;
+  width: 100vh;
+}
+
+.w-12 {
+  width: 3rem;
 }
 
 .transform {
@@ -1447,7 +1451,7 @@ video {
   }
 
   .md\:w-full {
-    width: 95%;
+    width: 100vh;
   }
 
   .md\:grid-flow-col {
