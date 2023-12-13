@@ -69,7 +69,7 @@
     const roomName = JSON.parse(document.getElementById('room_name').textContent);
     const username = JSON.parse(document.getElementById('username').textContent);
 
-    let protocol = window.location.host.includes("localhost") ? "ws://" : "wss://"
+    let protocol = window.location.host.includes("localhost") ? "ws://" : "ws://"
     const chatSocket = new WebSocket(
         protocol + window.location.host + "/ws/chat/" + roomName + "/"
     );

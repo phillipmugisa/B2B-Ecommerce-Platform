@@ -230,7 +230,7 @@
             const order_id = "{{order.order_id}}"
             const business_id = "{{request.user.business.pk}}"
 
-            let protocol = window.location.host.includes("localhost") ? "ws://" : "wss://"
+            let protocol = window.location.host.includes("localhost") ? "ws://" : "ws://"
             const chatSocket = new WebSocket(
                 protocol + window.location.host + "/ws/chat/orders/" + order_id + "/"
             );
