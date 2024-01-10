@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700;800&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&display=swap');
 
 /* css reset */
 
@@ -91,7 +92,35 @@ select {
 /* css reset */
 
 
+
+
+
 :root {
+
+    --primaryColor: #fedd58;
+    --primaryColorLight: #f0e064;
+    --secondaryColor: #a4b63c;
+    --accentColor: #476610;
+
+    --transition-2s: all .2s ease-in-out;
+    --form-border-color:hsl(0, 11%, 90%);
+    --search-border-radius: 20px;
+
+    /* Bold and Semi-bold for Headings 600 and 700 respectively */
+    /* Regular 400 for body text */
+    --font-family-default: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-family-raleway: 'Raleway', sans-serif;
+
+    /* Product component - Features on product card */
+    /* 1. product image */
+    /* 2. add to wishlist icon */
+    /* 3. price tag */
+    /* 4. product name */
+    /* 5. customer ratings */
+    /* 6. product availability status */
+    /* 7. product manufacturer */
+
+
     --brand-primary: #f6d683;
     --brand-primary: #ecab08;
     --brand-secondary: #171717;
@@ -117,7 +146,9 @@ select {
     --text-8: var(--gray-8);
 
     --font-lato: "Lato", sans-serif;
-    --font-nunito: "Nunito", sans-serif;
+    --font-nunito: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 }
 
 * {
