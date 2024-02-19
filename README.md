@@ -18,10 +18,12 @@ Welcome to my Business to Business Platform Web project. This platform serves as
   - Supplier Account
   - Buyer Account
   - Support Account
--Dashboards: Depending on the user's account type, they have access to one of three dashboards for content management:
+    
+- Dashboards: Depending on the user's account type, they have access to one of three dashboards for content management:
   - Supplier Dashboard
   - Buyer Dashboard
   - Support Dashboard
+    
 - Payment Integration: Users can make payments and handle subscriptions seamlessly using various payment gateways.
 - Real-time Chat: Users can engage in real-time chat with the support team for assistance and inquiries.
 
