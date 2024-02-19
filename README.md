@@ -27,4 +27,4 @@ Welcome to my Business to Business Platform Web project. This platform serves as
 - Payment Integration: Users can make payments and handle subscriptions seamlessly using various payment gateways.
 - Real-time Chat: Users can engage in real-time chat with the support team for assistance and inquiries.
 
-![Product Detail View](/"Screenshot (169).png")
+![Product Detail View](./Screenshot (169).png)
