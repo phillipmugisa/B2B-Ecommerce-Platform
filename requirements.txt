@@ -2,7 +2,7 @@ asgiref
 channels==3.0.4
 channels_redis
 Django==4.0.0
-django_allauth
+django_allauth==0.61.0
 django-rosetta
 djangorestframework
 django-modeltranslation
