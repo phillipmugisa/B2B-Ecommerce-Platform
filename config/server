@@ -119,7 +119,7 @@ server{
         proxy_set_header X-Forwarded-Host $server_name;
     }
 }
-" > default
+" > b2b
 mv b2b /etc/nginx/sites-available/b2b
 
 sudo ln -s /etc/nginx/sites-available/b2b /etc/nginx/sites-enabled
