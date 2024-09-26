@@ -89,12 +89,12 @@ upstream channels-backend {
 }
 
 server{
-    listen 80;
-    listen [::]:80;
+    listen 80 default_server;
+    listen [::]:80 default_server;
 
     server_name b2b.mugisa.tech;
 
-    location = /favicon.ico { access_log off; log_clearnot_found off; }
+    location = /favicon.ico { access_log off; log_not_found off; }
     location /static/ {
         root $PROJECT_DIR;
     }
