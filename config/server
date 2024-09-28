@@ -51,7 +51,7 @@ Description=gunicorn daemon for b2b
 After=network.target
 
 [Service]
-user=$USER
+user=ubuntu
 Group=www-data
 WorkingDirectory=$PROJECT_DIR
 ExecStart=$PROJECT_DIR/venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:$PROJECT_DIR/myproject.sock core.wsgi:application
@@ -68,7 +68,7 @@ Description=daphne daemon for b2b
 After=network.target
 
 [Service]
-User=root
+User=ubuntu
 Group=www-data
 WorkingDirectory=$PROJECT_DIR
 ExecStart=$PROJECT_DIR/venv/bin/daphne -p 9001 core.asgi:application
@@ -77,9 +77,9 @@ ExecStart=$PROJECT_DIR/venv/bin/daphne -p 9001 core.asgi:application
 WantedBy=multi-user.target
 " > /etc/systemd/system/daphne_b2b.service
 
+sudo systemctl daemon-reload
 sudo systemctl start gunicorn_b2b
 sudo systemctl enable gunicorn_b2b
-sudo systemctl daemon-reload
 
 apt-get install nginx -y
 # write nginx conf file
