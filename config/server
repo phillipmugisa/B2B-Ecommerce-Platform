@@ -10,18 +10,18 @@ apt-get install -y python3-pip python3-dev libpq-dev postgresql postgresql-contr
 
 # create db
 # user is prompted for db name
-echo "Enter Database Name: "
-read dbName
+# echo "Enter Database Name: "
+# read dbName
 
-echo "Enter Database User: "
-read dbUser
+# echo "Enter Database User: "
+# read dbUser
 
-if psql -lqt | cut -d \| -f 1 | grep -qw "$dbName"; then
-  echo "Database '$DB_NAME' already exists. Exiting."
-  exit 1
-fi
+# if psql -lqt | cut -d \| -f 1 | grep -qw "$dbName"; then
+#   echo "Database '$DB_NAME' already exists. Exiting."
+#   exit 1
+# fi
 
-psql -U $dbUser -d $dbName -c '\d'
+# psql -U $dbUser -d $dbName -c '\d'
 
 
 
