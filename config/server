@@ -77,8 +77,8 @@ ExecStart=$PROJECT_DIR/venv/bin/daphne -p 9001 core.asgi:application
 WantedBy=multi-user.target
 " > /etc/systemd/system/daphne_b2b.service
 
-sudo systemctl start gunicorn
-sudo systemctl enable gunicorn
+sudo systemctl start gunicorn_b2b
+sudo systemctl enable gunicorn_b2b
 sudo systemctl daemon-reload
 
 apt-get install nginx -y
